@@ -1,0 +1,22 @@
+{
+  "name": "ichooseyou.ml",
+  "version": "1.0.0",
+  "description": "Competitive Pokemon Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyndakwil/IChooseYou.ML.git"
+  },
+  "author": "Rohan Shetty, Trevor Du",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyndakwil/IChooseYou.ML/issues"
+  },
+  "homepage": "https://github.com/Cyndakwil/IChooseYou.ML#readme",
+  "dependencies": {
+    "pokemon-showdown": "^0.11.7"
+  }
+}
