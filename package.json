@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Cyndakwil/IChooseYou.ML#readme",
   "dependencies": {
+    "package.json": "^2.0.1",
     "pokemon-showdown": "^0.11.7"
   }
 }
