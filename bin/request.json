@@ -1,0 +1,205 @@
+{
+    "active": [
+        {
+            "moves": [
+                {
+                    "move": "Foul Play",
+                    "id": "foulplay",
+                    "pp": 24,
+                    "maxpp": 24,
+                    "target": "normal",
+                    "disabled": false
+                },
+                {
+                    "move": "Protect",
+                    "id": "protect",
+                    "pp": 16,
+                    "maxpp": 16,
+                    "target": "self",
+                    "disabled": false
+                },
+                {
+                    "move": "Psychic Fangs",
+                    "id": "psychicfangs",
+                    "pp": 16,
+                    "maxpp": 16,
+                    "target": "normal",
+                    "disabled": false
+                },
+                {
+                    "move": "Aura Wheel",
+                    "id": "aurawheel",
+                    "pp": 16,
+                    "maxpp": 16,
+                    "target": "normal",
+                    "disabled": false
+                }
+            ],
+            "canDynamax": true,
+            "maxMoves": {
+                "maxMoves": [
+                    {
+                        "move": "maxdarkness",
+                        "target": "adjacentFoe"
+                    },
+                    {
+                        "move": "maxguard",
+                        "target": "self"
+                    },
+                    {
+                        "move": "maxmindstorm",
+                        "target": "adjacentFoe"
+                    },
+                    {
+                        "move": "maxlightning",
+                        "target": "adjacentFoe"
+                    }
+                ]
+            }
+        }
+    ],
+    "side": {
+        "name": "Cock",
+        "id": "p1",
+        "pokemon": [
+            {
+                "ident": "p1: Morpeko",
+                "details": "Morpeko, L86, F",
+                "condition": "240/240",
+                "active": true,
+                "stats": {
+                    "atk": 213,
+                    "def": 149,
+                    "spa": 170,
+                    "spd": 149,
+                    "spe": 216
+                },
+                "moves": [
+                    "foulplay",
+                    "protect",
+                    "psychicfangs",
+                    "aurawheel"
+                ],
+                "baseAbility": "hungerswitch",
+                "item": "leftovers",
+                "pokeball": "pokeball",
+                "ability": "hungerswitch"
+            },
+            {
+                "ident": "p1: Steelix",
+                "details": "Steelix, L84, M",
+                "condition": "263/263",
+                "active": false,
+                "stats": {
+                    "atk": 191,
+                    "def": 384,
+                    "spa": 141,
+                    "spd": 157,
+                    "spe": 99
+                },
+                "moves": [
+                    "headsmash",
+                    "earthquake",
+                    "dragondance",
+                    "heavyslam"
+                ],
+                "baseAbility": "rockhead",
+                "item": "leftovers",
+                "pokeball": "pokeball",
+                "ability": "rockhead"
+            },
+            {
+                "ident": "p1: Clawitzer",
+                "details": "Clawitzer, L84, M",
+                "condition": "256/256",
+                "active": false,
+                "stats": {
+                    "atk": 127,
+                    "def": 196,
+                    "spa": 250,
+                    "spd": 198,
+                    "spe": 147
+                },
+                "moves": [
+                    "darkpulse",
+                    "aurasphere",
+                    "waterpulse",
+                    "icebeam"
+                ],
+                "baseAbility": "megalauncher",
+                "item": "choicespecs",
+                "pokeball": "pokeball",
+                "ability": "megalauncher"
+            },
+            {
+                "ident": "p1: Blacephalon",
+                "details": "Blacephalon, L80",
+                "condition": "215/215",
+                "active": false,
+                "stats": {
+                    "atk": 208,
+                    "def": 131,
+                    "spa": 288,
+                    "spd": 173,
+                    "spe": 217
+                },
+                "moves": [
+                    "psyshock",
+                    "trick",
+                    "shadowball",
+                    "fireblast"
+                ],
+                "baseAbility": "beastboost",
+                "item": "choicescarf",
+                "pokeball": "pokeball",
+                "ability": "beastboost"
+            },
+            {
+                "ident": "p1: Zacian",
+                "details": "Zacian, L68",
+                "condition": "238/238",
+                "active": false,
+                "stats": {
+                    "atk": 217,
+                    "def": 196,
+                    "spa": 149,
+                    "spd": 196,
+                    "spe": 228
+                },
+                "moves": [
+                    "playrough",
+                    "psychicfangs",
+                    "crunch",
+                    "swordsdance"
+                ],
+                "baseAbility": "intrepidsword",
+                "item": "lumberry",
+                "pokeball": "pokeball",
+                "ability": "intrepidsword"
+            },
+            {
+                "ident": "p1: Claydol",
+                "details": "Claydol, L86",
+                "condition": "243/243",
+                "active": false,
+                "stats": {
+                    "atk": 170,
+                    "def": 230,
+                    "spa": 170,
+                    "spd": 256,
+                    "spe": 178
+                },
+                "moves": [
+                    "icebeam",
+                    "toxic",
+                    "psychic",
+                    "earthquake"
+                ],
+                "baseAbility": "levitate",
+                "item": "leftovers",
+                "pokeball": "pokeball",
+                "ability": "levitate"
+            }
+        ]
+    }
+}
