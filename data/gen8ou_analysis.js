@@ -2,8 +2,8 @@
 // Data from ~15000 matches played in November 2021
 // https://www.smogon.com/stats/2021-11/chaos/gen8ou-0.json
 
-const {Dex} = require("pokemon-showdown");
-const data = require("./gen8ou.json");
+const data = require("./gen8ou_1121.json");
+const fs = require("fs");
 
 // 1. Compile list of moves and number of uses
 console.log("MOVES\n---------")
@@ -87,3 +87,9 @@ for (var i = 0; i < sortedAbilities.length; ++i) {
     if (abilities[sortedAbilities[i]] < abilityThreshold) break;
 }
 console.log(`Number of Abilities Used >${abilityThreshold} times: ${i}`);
+
+
+// Write sorted lists to json files
+fs.writeFileSync("sortedMoves.json", JSON.stringify(sortedMoves), "utf-8");
+fs.writeFileSync("sortedItems.json", JSON.stringify(sortedItems), "utf-8");
+fs.writeFileSync("sortedAbilities.json", JSON.stringify(sortedAbilities), "utf-8");
