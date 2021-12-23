@@ -1,4 +1,5 @@
 // Script to perform some data analysis on showdown matches and pokemon in general
+// Also sorts moves.json, items.json, abilities.json based on usage stats
 // Data from ~15000 matches played in November 2021
 // https://www.smogon.com/stats/2021-11/chaos/gen8ou-0.json
 
@@ -71,7 +72,7 @@ console.log();
 // Printing number of moves, items, and abilities with # of uses greater than some threshold
 let moveThreshold = 1000;
 let itemThreshold = 1000;
-let abilityThreshold = 0;
+let abilityThreshold = 100;
 
 for (var i = 0; i < sortedMoves.length; ++i) {
     if (moves[sortedMoves[i]] < moveThreshold) break;
@@ -89,7 +90,21 @@ for (var i = 0; i < sortedAbilities.length; ++i) {
 console.log(`Number of Abilities Used >${abilityThreshold} times: ${i}`);
 
 
-// Write sorted lists to json files
-fs.writeFileSync("sortedMoves.json", JSON.stringify(sortedMoves), "utf-8");
-fs.writeFileSync("sortedItems.json", JSON.stringify(sortedItems), "utf-8");
-fs.writeFileSync("sortedAbilities.json", JSON.stringify(sortedAbilities), "utf-8");
+// Sort moves.json, items.json, abilities.json
+const allMoves = require("./moves.json");
+const allItems = require("./items.json");
+const allAbilities = require("./abilities.json");
+
+for (let move of allMoves)
+    if (!sortedMoves.includes(move))
+        sortedMoves.push(move)
+for (let item of allItems)
+    if (!sortedItems.includes(item))
+        sortedItems.push(item)
+for (let ability of allAbilities)
+    if (!sortedAbilities.includes(ability))
+        sortedAbilities.push(ability)
+
+fs.writeFileSync("./moves.json", JSON.stringify(sortedMoves), "utf8");
+fs.writeFileSync("./items.json", JSON.stringify(sortedItems), "utf8");
+fs.writeFileSync("./abilities.json", JSON.stringify(sortedAbilities), "utf8");
