@@ -4,7 +4,7 @@ Provides tools for preprocessing input from the showdown simulator.
 Functionality:
 --------------
 (for more information check docstrings of each function)
-one_hot_encode_mia(sarr, topk_moves = 500, topk_items = 125, topk_abilities = 220)
+one_hot_encode_mia(sarr, topk_moves = -1, topk_items = -1, topk_abilities = -1)
 """
 
 import numpy as np
