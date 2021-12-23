@@ -66,3 +66,24 @@ for (let ability of sortedAbilities) {
     console.log(ctr++ + " " + ability + " " + abilities[ability]);
 }
 console.log();
+
+
+// Printing number of moves, items, and abilities with # of uses greater than some threshold
+let moveThreshold = 1000;
+let itemThreshold = 1000;
+let abilityThreshold = 0;
+
+for (var i = 0; i < sortedMoves.length; ++i) {
+    if (moves[sortedMoves[i]] < moveThreshold) break;
+}
+console.log(`Number of Moves Used >${moveThreshold} times: ${i}`);
+
+for (var i = 0; i < sortedItems.length; ++i) {
+    if (items[sortedItems[i]] < itemThreshold) break;
+}
+console.log(`Number of Items Used >${itemThreshold} times: ${i}`);
+
+for (var i = 0; i < sortedAbilities.length; ++i) {
+    if (abilities[sortedAbilities[i]] < abilityThreshold) break;
+}
+console.log(`Number of Abilities Used >${abilityThreshold} times: ${i}`);
