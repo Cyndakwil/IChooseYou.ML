@@ -21643,7 +21643,7 @@
             "special-defense": 127,
             "speed": 77
         },
-        "species": "necrozmadawnwings",
+        "species": "Necrozma-Dawn-Wings",
         "types": [
             "psychic",
             "ghost"
@@ -21663,7 +21663,7 @@
             "special-defense": 79,
             "speed": 107
         },
-        "species": "blacephalon",
+        "species": "Blacephalon",
         "types": [
             "fire",
             "ghost"
@@ -21683,7 +21683,7 @@
             "special-defense": 109,
             "speed": 77
         },
-        "species": "necrozmaduskmane",
+        "species": "Necrozma-Dusk-Mane",
         "types": [
             "psychic",
             "steel"
@@ -21703,7 +21703,7 @@
             "special-defense": 97,
             "speed": 129
         },
-        "species": "necrozmaultra",
+        "species": "Necrozma-Ultra",
         "types": [
             "psychic",
             "dragon"
@@ -26136,7 +26136,7 @@
     },
     "calyrexice": {
         "num": 891,
-        "name": "Calyrex Ice",
+        "name": "Calyrex-Ice",
         "types": [
             "psychic",
             "ice"
@@ -26158,7 +26158,7 @@
     },
     "calyrexshadow": {
         "num": 891,
-        "name": "Kubfu",
+        "name": "Calyrex-Shadow",
         "types": [
             "psychic",
             "ghost"

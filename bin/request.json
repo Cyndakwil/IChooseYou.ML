@@ -7,10 +7,10 @@
 	"gameType": "singles",
 	"activePerHalf": 1,
 	"prngSeed": [
-		45514,
-		17054,
-		10805,
-		45978
+		45981,
+		38119,
+		46997,
+		46596
 	],
 	"rated": false,
 	"reportExactHP": false,
@@ -18,21 +18,27 @@
 	"supportCancel": true,
 	"faintQueue": [],
 	"inputLog": [
-		">start {\"formatid\":\"gen8randombattle\",\"seed\":[45514,17054,10805,45978]}",
-		">player p1 {\"name\":\"Cock\",\"seed\":[34412,36817,34889,10397]}",
-		">player p2 {\"name\":\"Balls\",\"seed\":[12936,8402,9479,9157]}",
-		">p1 move fierywrath",
-		">p2 move overdrive",
-		">p1 move rest",
-		">p2 move overdrive",
-		">p1 move fierywrath",
-		">p2 move sludgewave"
+		">start {\"formatid\":\"gen8randombattle\",\"seed\":[45981,38119,46997,46596]}",
+		">player p1 {\"name\":\"Cock\",\"seed\":[59010,47307,64501,1590]}",
+		">player p2 {\"name\":\"Balls\",\"seed\":[47409,25569,34349,36301]}",
+		">p1 move curse",
+		">p2 move rockslide",
+		">p1 move bodyslam",
+		">p2 move rockslide",
+		">p1 move darkestlariat",
+		">p2 move ironhead",
+		">p1 move bodyslam",
+		">p2 move superpower",
+		">p1 move darkestlariat",
+		">p2 move superpower",
+		">p1 move bodyslam",
+		">p2 move ironhead"
 	],
 	"messageLog": [],
-	"sentLogPos": 65,
+	"sentLogPos": 108,
 	"sentEnd": false,
 	"requestState": "switch",
-	"turn": 3,
+	"turn": 6,
 	"midTurn": true,
 	"started": true,
 	"ended": false,
@@ -52,18 +58,18 @@
 	"activeTarget": null,
 	"lastMove": {
 		"hit": 1,
-		"totalDamage": 154,
+		"totalDamage": 32,
 		"moveHitData": {
-			"p2a": {
+			"p1a": {
 				"crit": false,
 				"typeMod": 0,
 				"zBrokeProtect": false
 			}
 		},
-		"move": "[Move:fierywrath]"
+		"move": "[Move:ironhead]"
 	},
-	"lastMoveLine": 58,
-	"lastSuccessfulMoveThisTurn": "fierywrath",
+	"lastMoveLine": 101,
+	"lastSuccessfulMoveThisTurn": "ironhead",
 	"lastDamage": 0,
 	"abilityOrder": 2,
 	"quickClawRoll": false,
@@ -88,7 +94,7 @@
 		{
 			"foe": "[Side:p2]",
 			"allySide": null,
-			"lastSelectedMove": "fierywrath",
+			"lastSelectedMove": "bodyslam",
 			"id": "p1",
 			"n": 0,
 			"name": "Cock",
@@ -96,9 +102,9 @@
 			"active": [
 				"[Pokemon:p1a]"
 			],
-			"pokemonLeft": 6,
+			"pokemonLeft": 5,
 			"faintedLastTurn": null,
-			"faintedThisTurn": null,
+			"faintedThisTurn": "[Pokemon:p1a]",
 			"zMoveUsed": false,
 			"dynamaxUsed": false,
 			"sideConditions": {},
@@ -109,108 +115,288 @@
 			"pokemon": [
 				{
 					"m": {},
-					"baseSpecies": "[Species:moltresgalar]",
-					"species": "[Species:moltresgalar]",
+					"baseSpecies": "[Species:snorlax]",
+					"species": "[Species:snorlax]",
 					"speciesState": {
-						"id": "moltresgalar"
+						"id": "snorlax"
 					},
-					"gender": "",
-					"gigantamax": false,
+					"gender": "F",
+					"gigantamax": true,
 					"moveSlots": [
 						{
-							"move": "Rest",
-							"id": "rest",
-							"pp": 15,
-							"maxpp": 16,
-							"target": "self",
-							"disabled": false,
-							"disabledSource": "",
-							"used": true
-						},
-						{
-							"move": "Hurricane",
-							"id": "hurricane",
+							"move": "Curse",
+							"id": "curse",
 							"pp": 16,
 							"maxpp": 16,
-							"target": "any",
+							"target": "randomNormal",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
 						},
 						{
-							"move": "Fiery Wrath",
-							"id": "fierywrath",
+							"move": "Darkest Lariat",
+							"id": "darkestlariat",
 							"pp": 14,
 							"maxpp": 16,
-							"target": "allAdjacentFoes",
+							"target": "normal",
 							"disabled": false,
 							"disabledSource": "",
 							"used": true
 						},
 						{
-							"move": "Nasty Plot",
-							"id": "nastyplot",
-							"pp": 32,
-							"maxpp": 32,
-							"target": "self",
+							"move": "Earthquake",
+							"id": "earthquake",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacent",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
+						},
+						{
+							"move": "Body Slam",
+							"id": "bodyslam",
+							"pp": 22,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": true
 						}
 					],
 					"position": 0,
-					"details": "Moltres-Galar, L76",
-					"status": "",
-					"statusState": {
-						"id": "",
-						"target": "[Pokemon:p1a]",
-						"source": "[Pokemon:p1a]"
-					},
+					"details": "Snorlax, L82, F",
+					"status": "fnt",
+					"statusState": {},
 					"volatiles": {},
 					"showCure": false,
-					"hpType": "Dragon",
+					"hpType": "Dark",
 					"hpPower": 60,
-					"baseHpType": "Dragon",
+					"baseHpType": "Dark",
 					"baseHpPower": 60,
 					"baseStoredStats": {
-						"atk": 134,
-						"def": 181,
-						"spa": 196,
-						"spd": 234,
-						"spe": 181,
-						"hp": 262
+						"atk": 228,
+						"def": 154,
+						"spa": 154,
+						"spd": 228,
+						"spe": 96,
+						"hp": 397
 					},
 					"storedStats": {
-						"atk": 134,
-						"def": 181,
-						"spa": 196,
-						"spd": 234,
-						"spe": 181
+						"atk": 228,
+						"def": 154,
+						"spa": 154,
+						"spd": 228,
+						"spe": 96
 					},
 					"boosts": {
 						"atk": 0,
 						"def": 0,
-						"spa": 2,
+						"spa": 0,
 						"spd": 0,
 						"spe": 0,
 						"accuracy": 0,
 						"evasion": 0
 					},
-					"baseAbility": "berserk",
-					"ability": "berserk",
+					"baseAbility": "thickfat",
+					"ability": "thickfat",
 					"abilityState": {
-						"id": "berserk",
-						"target": "[Pokemon:p1a]",
-						"checkedBerserk": true
-					},
-					"item": "",
-					"itemState": {
-						"id": "",
+						"id": "thickfat",
 						"target": "[Pokemon:p1a]"
 					},
-					"lastItem": "chestoberry",
+					"item": "leftovers",
+					"itemState": {
+						"id": "leftovers"
+					},
+					"lastItem": "",
 					"usedItemThisTurn": false,
-					"ateBerry": true,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": true,
+					"faintQueued": true,
+					"subFainted": null,
+					"types": [
+						"Normal"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Normal",
+					"switchFlag": true,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": true,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [
+						{
+							"source": "[Pokemon:p2a]",
+							"damage": 32,
+							"move": "ironhead",
+							"thisTurn": true,
+							"slot": "p2a",
+							"damageValue": 32
+						}
+					],
+					"isActive": false,
+					"activeTurns": 6,
+					"activeMoveActions": 5,
+					"previouslySwitchedIn": 1,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 4600,
+					"speed": 96,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": "G-Max Replenish",
+					"maxhp": 397,
+					"baseMaxhp": 397,
+					"hp": 0,
+					"moveLastTurnResult": true,
+					"lastMoveTargetLoc": 1,
+					"set": {
+						"name": "Snorlax",
+						"species": "Snorlax",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": true,
+						"level": 82,
+						"moves": [
+							"curse",
+							"darkestlariat",
+							"earthquake",
+							"bodyslam"
+						],
+						"ability": "Thick Fat",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 0
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:incineroar]",
+					"species": "[Species:incineroar]",
+					"speciesState": {
+						"id": "incineroar"
+					},
+					"gender": "M",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "U-turn",
+							"id": "uturn",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Earthquake",
+							"id": "earthquake",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacent",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Flare Blitz",
+							"id": "flareblitz",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Knock Off",
+							"id": "knockoff",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 1,
+					"details": "Incineroar, L80, M",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 230,
+						"def": 190,
+						"spa": 174,
+						"spd": 190,
+						"spe": 142,
+						"hp": 283
+					},
+					"storedStats": {
+						"atk": 230,
+						"def": 190,
+						"spa": 174,
+						"spd": 190,
+						"spe": 142
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "intimidate",
+					"ability": "intimidate",
+					"abilityState": {
+						"id": "intimidate"
+					},
+					"item": "choicescarf",
+					"itemState": {
+						"id": "choicescarf"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
 					"trapped": false,
 					"maybeTrapped": false,
 					"maybeDisabled": false,
@@ -220,101 +406,59 @@
 					"faintQueued": false,
 					"subFainted": null,
 					"types": [
-						"Dark",
-						"Flying"
+						"Fire",
+						"Dark"
 					],
 					"addedType": "",
 					"knownType": true,
-					"apparentType": "Dark/Flying",
+					"apparentType": "Fire/Dark",
 					"switchFlag": false,
 					"forceSwitchFlag": false,
 					"skipBeforeSwitchOutEventFlag": false,
 					"draggedIn": null,
-					"newlySwitched": false,
+					"newlySwitched": true,
 					"beingCalledBack": false,
-					"lastMove": {
-						"hit": 1,
-						"totalDamage": 154,
-						"moveHitData": {
-							"p2a": {
-								"crit": false,
-								"typeMod": 0,
-								"zBrokeProtect": false
-							}
-						},
-						"move": "[Move:fierywrath]"
-					},
-					"lastMoveUsed": {
-						"hit": 1,
-						"totalDamage": 154,
-						"moveHitData": {
-							"p2a": {
-								"crit": false,
-								"typeMod": 0,
-								"zBrokeProtect": false
-							}
-						},
-						"move": "[Move:fierywrath]"
-					},
-					"moveThisTurn": "fierywrath",
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
 					"statsRaisedThisTurn": false,
 					"statsLoweredThisTurn": false,
 					"hurtThisTurn": null,
-					"lastDamage": 154,
-					"attackedBy": [
-						{
-							"source": "[Pokemon:p2a]",
-							"damage": 198,
-							"move": "overdrive",
-							"thisTurn": false,
-							"slot": "p2a",
-							"damageValue": 198
-						},
-						{
-							"source": "[Pokemon:p2a]",
-							"damage": 194,
-							"move": "overdrive",
-							"thisTurn": false,
-							"slot": "p2a",
-							"damageValue": 194
-						}
-					],
-					"isActive": true,
-					"activeTurns": 3,
-					"activeMoveActions": 3,
-					"previouslySwitchedIn": 1,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
 					"truantTurn": false,
-					"isStarted": true,
+					"isStarted": false,
 					"duringMove": false,
-					"weighthg": 660,
-					"speed": 181,
+					"weighthg": 830,
+					"speed": 142,
 					"abilityOrder": 0,
 					"canMegaEvo": null,
 					"canUltraBurst": null,
 					"canGigantamax": null,
-					"maxhp": 262,
-					"baseMaxhp": 262,
-					"hp": 68,
-					"moveLastTurnResult": true,
-					"moveThisTurnResult": true,
-					"lastMoveTargetLoc": 1,
+					"maxhp": 283,
+					"baseMaxhp": 283,
+					"hp": 283,
 					"set": {
-						"name": "Moltres",
-						"species": "Moltres-Galar",
-						"gender": "N",
+						"name": "Incineroar",
+						"species": "Incineroar",
+						"gender": "",
 						"shiny": false,
 						"gigantamax": false,
-						"level": 76,
+						"level": 80,
 						"moves": [
-							"rest",
-							"hurricane",
-							"fierywrath",
-							"nastyplot"
+							"uturn",
+							"earthquake",
+							"flareblitz",
+							"knockoff"
 						],
-						"ability": "Berserk",
+						"ability": "Intimidate",
 						"evs": {
 							"hp": 85,
-							"atk": 0,
+							"atk": 85,
 							"def": 85,
 							"spa": 85,
 							"spd": 85,
@@ -322,14 +466,190 @@
 						},
 						"ivs": {
 							"hp": 31,
-							"atk": 0,
+							"atk": 31,
 							"def": 31,
 							"spa": 31,
 							"spd": 31,
 							"spe": 31
 						},
-						"item": "Chesto Berry"
-					}
+						"item": "Choice Scarf"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:beheeyem]",
+					"species": "[Species:beheeyem]",
+					"speciesState": {
+						"id": "beheeyem"
+					},
+					"gender": "M",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Trick Room",
+							"id": "trickroom",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "all",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Shadow Ball",
+							"id": "shadowball",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Psychic",
+							"id": "psychic",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Thunderbolt",
+							"id": "thunderbolt",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 2,
+					"details": "Beheeyem, L86, M",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Psychic",
+					"hpPower": 60,
+					"baseHpType": "Psychic",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 134,
+						"def": 178,
+						"spa": 264,
+						"spd": 213,
+						"spe": 73,
+						"hp": 269
+					},
+					"storedStats": {
+						"atk": 134,
+						"def": 178,
+						"spa": 264,
+						"spd": 213,
+						"spe": 73
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "analytic",
+					"ability": "analytic",
+					"abilityState": {
+						"id": "analytic"
+					},
+					"item": "lifeorb",
+					"itemState": {
+						"id": "lifeorb"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Psychic"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Psychic",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 345,
+					"speed": 73,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 269,
+					"baseMaxhp": 269,
+					"hp": 269,
+					"set": {
+						"name": "Beheeyem",
+						"species": "Beheeyem",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 86,
+						"moves": [
+							"trickroom",
+							"shadowball",
+							"psychic",
+							"thunderbolt"
+						],
+						"ability": "Analytic",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 0
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 0
+						},
+						"item": "Life Orb"
+					},
+					"percenthp": 1
 				},
 				{
 					"m": {},
@@ -338,14 +658,14 @@
 					"speciesState": {
 						"id": "whimsicott"
 					},
-					"gender": "M",
+					"gender": "F",
 					"gigantamax": false,
 					"moveSlots": [
 						{
-							"move": "Leech Seed",
-							"id": "leechseed",
-							"pp": 16,
-							"maxpp": 16,
+							"move": "Taunt",
+							"id": "taunt",
+							"pp": 32,
+							"maxpp": 32,
 							"target": "normal",
 							"disabled": false,
 							"disabledSource": "",
@@ -372,8 +692,8 @@
 							"used": false
 						},
 						{
-							"move": "Energy Ball",
-							"id": "energyball",
+							"move": "Leech Seed",
+							"id": "leechseed",
 							"pp": 16,
 							"maxpp": 16,
 							"target": "normal",
@@ -382,8 +702,8 @@
 							"used": false
 						}
 					],
-					"position": 1,
-					"details": "Whimsicott, L84, M",
+					"position": 3,
+					"details": "Whimsicott, L84, F",
 					"status": "",
 					"statusState": {},
 					"volatiles": {},
@@ -481,10 +801,10 @@
 						"gigantamax": false,
 						"level": 84,
 						"moves": [
-							"leechseed",
+							"taunt",
 							"stunspore",
 							"moonblast",
-							"energyball"
+							"leechseed"
 						],
 						"ability": "Prankster",
 						"evs": {
@@ -504,204 +824,20 @@
 							"spe": 31
 						},
 						"item": "Leftovers"
-					}
+					},
+					"percenthp": 1
 				},
 				{
 					"m": {},
-					"baseSpecies": "[Species:metagross]",
-					"species": "[Species:metagross]",
+					"baseSpecies": "[Species:gyarados]",
+					"species": "[Species:gyarados]",
 					"speciesState": {
-						"id": "metagross"
-					},
-					"gender": "",
-					"gigantamax": false,
-					"moveSlots": [
-						{
-							"move": "Earthquake",
-							"id": "earthquake",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "allAdjacent",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Bullet Punch",
-							"id": "bulletpunch",
-							"pp": 48,
-							"maxpp": 48,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Meteor Mash",
-							"id": "meteormash",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Thunder Punch",
-							"id": "thunderpunch",
-							"pp": 24,
-							"maxpp": 24,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						}
-					],
-					"position": 2,
-					"details": "Metagross, L79",
-					"status": "",
-					"statusState": {},
-					"volatiles": {},
-					"showCure": false,
-					"hpType": "Dark",
-					"hpPower": 60,
-					"baseHpType": "Dark",
-					"baseHpPower": 60,
-					"baseStoredStats": {
-						"atk": 259,
-						"def": 251,
-						"spa": 196,
-						"spd": 188,
-						"spe": 156,
-						"hp": 256
-					},
-					"storedStats": {
-						"atk": 259,
-						"def": 251,
-						"spa": 196,
-						"spd": 188,
-						"spe": 156
-					},
-					"boosts": {
-						"atk": 0,
-						"def": 0,
-						"spa": 0,
-						"spd": 0,
-						"spe": 0,
-						"accuracy": 0,
-						"evasion": 0
-					},
-					"baseAbility": "clearbody",
-					"ability": "clearbody",
-					"abilityState": {
-						"id": "clearbody"
-					},
-					"item": "choiceband",
-					"itemState": {
-						"id": "choiceband"
-					},
-					"lastItem": "",
-					"usedItemThisTurn": false,
-					"ateBerry": false,
-					"trapped": false,
-					"maybeTrapped": false,
-					"maybeDisabled": false,
-					"illusion": null,
-					"transformed": false,
-					"fainted": false,
-					"faintQueued": false,
-					"subFainted": null,
-					"types": [
-						"Steel",
-						"Psychic"
-					],
-					"addedType": "",
-					"knownType": true,
-					"apparentType": "Steel/Psychic",
-					"switchFlag": false,
-					"forceSwitchFlag": false,
-					"skipBeforeSwitchOutEventFlag": false,
-					"draggedIn": null,
-					"newlySwitched": true,
-					"beingCalledBack": false,
-					"lastMove": null,
-					"lastMoveUsed": null,
-					"moveThisTurn": "",
-					"statsRaisedThisTurn": false,
-					"statsLoweredThisTurn": false,
-					"hurtThisTurn": null,
-					"lastDamage": 0,
-					"attackedBy": [],
-					"isActive": false,
-					"activeTurns": 0,
-					"activeMoveActions": 0,
-					"previouslySwitchedIn": 0,
-					"truantTurn": false,
-					"isStarted": false,
-					"duringMove": false,
-					"weighthg": 5500,
-					"speed": 156,
-					"abilityOrder": 0,
-					"canMegaEvo": null,
-					"canUltraBurst": null,
-					"canGigantamax": null,
-					"maxhp": 256,
-					"baseMaxhp": 256,
-					"hp": 256,
-					"set": {
-						"name": "Metagross",
-						"species": "Metagross",
-						"gender": "N",
-						"shiny": false,
-						"gigantamax": false,
-						"level": 79,
-						"moves": [
-							"earthquake",
-							"bulletpunch",
-							"meteormash",
-							"thunderpunch"
-						],
-						"ability": "Clear Body",
-						"evs": {
-							"hp": 85,
-							"atk": 85,
-							"def": 85,
-							"spa": 85,
-							"spd": 85,
-							"spe": 85
-						},
-						"ivs": {
-							"hp": 31,
-							"atk": 31,
-							"def": 31,
-							"spa": 31,
-							"spd": 31,
-							"spe": 31
-						},
-						"item": "Choice Band"
-					}
-				},
-				{
-					"m": {},
-					"baseSpecies": "[Species:kangaskhan]",
-					"species": "[Species:kangaskhan]",
-					"speciesState": {
-						"id": "kangaskhan"
+						"id": "gyarados"
 					},
 					"gender": "F",
 					"gigantamax": false,
 					"moveSlots": [
 						{
-							"move": "Double-Edge",
-							"id": "doubleedge",
-							"pp": 24,
-							"maxpp": 24,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
 							"move": "Earthquake",
 							"id": "earthquake",
 							"pp": 16,
@@ -712,202 +848,38 @@
 							"used": false
 						},
 						{
-							"move": "Hammer Arm",
-							"id": "hammerarm",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Sucker Punch",
-							"id": "suckerpunch",
+							"move": "Bounce",
+							"id": "bounce",
 							"pp": 8,
 							"maxpp": 8,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						}
-					],
-					"position": 3,
-					"details": "Kangaskhan, L84, F",
-					"status": "",
-					"statusState": {},
-					"volatiles": {},
-					"showCure": false,
-					"hpType": "Dark",
-					"hpPower": 60,
-					"baseHpType": "Dark",
-					"baseHpPower": 60,
-					"baseStoredStats": {
-						"atk": 208,
-						"def": 183,
-						"spa": 115,
-						"spd": 183,
-						"spe": 199,
-						"hp": 314
-					},
-					"storedStats": {
-						"atk": 208,
-						"def": 183,
-						"spa": 115,
-						"spd": 183,
-						"spe": 199
-					},
-					"boosts": {
-						"atk": 0,
-						"def": 0,
-						"spa": 0,
-						"spd": 0,
-						"spe": 0,
-						"accuracy": 0,
-						"evasion": 0
-					},
-					"baseAbility": "scrappy",
-					"ability": "scrappy",
-					"abilityState": {
-						"id": "scrappy"
-					},
-					"item": "choiceband",
-					"itemState": {
-						"id": "choiceband"
-					},
-					"lastItem": "",
-					"usedItemThisTurn": false,
-					"ateBerry": false,
-					"trapped": false,
-					"maybeTrapped": false,
-					"maybeDisabled": false,
-					"illusion": null,
-					"transformed": false,
-					"fainted": false,
-					"faintQueued": false,
-					"subFainted": null,
-					"types": [
-						"Normal"
-					],
-					"addedType": "",
-					"knownType": true,
-					"apparentType": "Normal",
-					"switchFlag": false,
-					"forceSwitchFlag": false,
-					"skipBeforeSwitchOutEventFlag": false,
-					"draggedIn": null,
-					"newlySwitched": true,
-					"beingCalledBack": false,
-					"lastMove": null,
-					"lastMoveUsed": null,
-					"moveThisTurn": "",
-					"statsRaisedThisTurn": false,
-					"statsLoweredThisTurn": false,
-					"hurtThisTurn": null,
-					"lastDamage": 0,
-					"attackedBy": [],
-					"isActive": false,
-					"activeTurns": 0,
-					"activeMoveActions": 0,
-					"previouslySwitchedIn": 0,
-					"truantTurn": false,
-					"isStarted": false,
-					"duringMove": false,
-					"weighthg": 800,
-					"speed": 199,
-					"abilityOrder": 0,
-					"canMegaEvo": null,
-					"canUltraBurst": null,
-					"canGigantamax": null,
-					"maxhp": 314,
-					"baseMaxhp": 314,
-					"hp": 314,
-					"set": {
-						"name": "Kangaskhan",
-						"species": "Kangaskhan",
-						"gender": "F",
-						"shiny": false,
-						"gigantamax": false,
-						"level": 84,
-						"moves": [
-							"doubleedge",
-							"earthquake",
-							"hammerarm",
-							"suckerpunch"
-						],
-						"ability": "Scrappy",
-						"evs": {
-							"hp": 85,
-							"atk": 85,
-							"def": 85,
-							"spa": 85,
-							"spd": 85,
-							"spe": 85
-						},
-						"ivs": {
-							"hp": 31,
-							"atk": 31,
-							"def": 31,
-							"spa": 31,
-							"spd": 31,
-							"spe": 31
-						},
-						"item": "Choice Band"
-					}
-				},
-				{
-					"m": {},
-					"baseSpecies": "[Species:thievul]",
-					"species": "[Species:thievul]",
-					"speciesState": {
-						"id": "thievul"
-					},
-					"gender": "M",
-					"gigantamax": false,
-					"moveSlots": [
-						{
-							"move": "Dark Pulse",
-							"id": "darkpulse",
-							"pp": 24,
-							"maxpp": 24,
 							"target": "any",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
 						},
 						{
-							"move": "Parting Shot",
-							"id": "partingshot",
-							"pp": 32,
-							"maxpp": 32,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Grass Knot",
-							"id": "grassknot",
-							"pp": 32,
-							"maxpp": 32,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Foul Play",
-							"id": "foulplay",
+							"move": "Waterfall",
+							"id": "waterfall",
 							"pp": 24,
 							"maxpp": 24,
 							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Dragon Dance",
+							"id": "dragondance",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "self",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
 						}
 					],
 					"position": 4,
-					"details": "Thievul, L86, M",
+					"details": "Gyarados, L76, F",
 					"status": "",
 					"statusState": {},
 					"volatiles": {},
@@ -917,19 +889,19 @@
 					"baseHpType": "Dark",
 					"baseHpPower": 60,
 					"baseStoredStats": {
-						"atk": 149,
-						"def": 149,
-						"spa": 199,
-						"spd": 207,
-						"spe": 204,
-						"hp": 261
+						"atk": 234,
+						"def": 164,
+						"spa": 135,
+						"spd": 196,
+						"spe": 167,
+						"hp": 269
 					},
 					"storedStats": {
-						"atk": 149,
-						"def": 149,
-						"spa": 199,
-						"spd": 207,
-						"spe": 204
+						"atk": 234,
+						"def": 164,
+						"spa": 135,
+						"spd": 196,
+						"spe": 167
 					},
 					"boosts": {
 						"atk": 0,
@@ -940,184 +912,10 @@
 						"accuracy": 0,
 						"evasion": 0
 					},
-					"baseAbility": "stakeout",
-					"ability": "stakeout",
+					"baseAbility": "moxie",
+					"ability": "moxie",
 					"abilityState": {
-						"id": "stakeout"
-					},
-					"item": "leftovers",
-					"itemState": {
-						"id": "leftovers"
-					},
-					"lastItem": "",
-					"usedItemThisTurn": false,
-					"ateBerry": false,
-					"trapped": false,
-					"maybeTrapped": false,
-					"maybeDisabled": false,
-					"illusion": null,
-					"transformed": false,
-					"fainted": false,
-					"faintQueued": false,
-					"subFainted": null,
-					"types": [
-						"Dark"
-					],
-					"addedType": "",
-					"knownType": true,
-					"apparentType": "Dark",
-					"switchFlag": false,
-					"forceSwitchFlag": false,
-					"skipBeforeSwitchOutEventFlag": false,
-					"draggedIn": null,
-					"newlySwitched": true,
-					"beingCalledBack": false,
-					"lastMove": null,
-					"lastMoveUsed": null,
-					"moveThisTurn": "",
-					"statsRaisedThisTurn": false,
-					"statsLoweredThisTurn": false,
-					"hurtThisTurn": null,
-					"lastDamage": 0,
-					"attackedBy": [],
-					"isActive": false,
-					"activeTurns": 0,
-					"activeMoveActions": 0,
-					"previouslySwitchedIn": 0,
-					"truantTurn": false,
-					"isStarted": false,
-					"duringMove": false,
-					"weighthg": 199,
-					"speed": 204,
-					"abilityOrder": 0,
-					"canMegaEvo": null,
-					"canUltraBurst": null,
-					"canGigantamax": null,
-					"maxhp": 261,
-					"baseMaxhp": 261,
-					"hp": 261,
-					"set": {
-						"name": "Thievul",
-						"species": "Thievul",
-						"gender": "",
-						"shiny": false,
-						"gigantamax": false,
-						"level": 86,
-						"moves": [
-							"darkpulse",
-							"partingshot",
-							"grassknot",
-							"foulplay"
-						],
-						"ability": "Stakeout",
-						"evs": {
-							"hp": 85,
-							"atk": 85,
-							"def": 85,
-							"spa": 85,
-							"spd": 85,
-							"spe": 85
-						},
-						"ivs": {
-							"hp": 31,
-							"atk": 31,
-							"def": 31,
-							"spa": 31,
-							"spd": 31,
-							"spe": 31
-						},
-						"item": "Leftovers"
-					}
-				},
-				{
-					"m": {},
-					"baseSpecies": "[Species:mantine]",
-					"species": "[Species:mantine]",
-					"speciesState": {
-						"id": "mantine"
-					},
-					"gender": "M",
-					"gigantamax": false,
-					"moveSlots": [
-						{
-							"move": "Hurricane",
-							"id": "hurricane",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "any",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Roost",
-							"id": "roost",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "self",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Ice Beam",
-							"id": "icebeam",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Scald",
-							"id": "scald",
-							"pp": 24,
-							"maxpp": 24,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						}
-					],
-					"position": 5,
-					"details": "Mantine, L86, M",
-					"status": "",
-					"statusState": {},
-					"volatiles": {},
-					"showCure": false,
-					"hpType": "Dragon",
-					"hpPower": 60,
-					"baseHpType": "Dragon",
-					"baseHpPower": 60,
-					"baseStoredStats": {
-						"atk": 73,
-						"def": 170,
-						"spa": 187,
-						"spd": 290,
-						"spe": 170,
-						"hp": 286
-					},
-					"storedStats": {
-						"atk": 73,
-						"def": 170,
-						"spa": 187,
-						"spd": 290,
-						"spe": 170
-					},
-					"boosts": {
-						"atk": 0,
-						"def": 0,
-						"spa": 0,
-						"spd": 0,
-						"spe": 0,
-						"accuracy": 0,
-						"evasion": 0
-					},
-					"baseAbility": "waterabsorb",
-					"ability": "waterabsorb",
-					"abilityState": {
-						"id": "waterabsorb"
+						"id": "moxie"
 					},
 					"item": "heavydutyboots",
 					"itemState": {
@@ -1162,32 +960,32 @@
 					"truantTurn": false,
 					"isStarted": false,
 					"duringMove": false,
-					"weighthg": 2200,
-					"speed": 170,
+					"weighthg": 2350,
+					"speed": 167,
 					"abilityOrder": 0,
 					"canMegaEvo": null,
 					"canUltraBurst": null,
 					"canGigantamax": null,
-					"maxhp": 286,
-					"baseMaxhp": 286,
-					"hp": 286,
+					"maxhp": 269,
+					"baseMaxhp": 269,
+					"hp": 269,
 					"set": {
-						"name": "Mantine",
-						"species": "Mantine",
+						"name": "Gyarados",
+						"species": "Gyarados",
 						"gender": "",
 						"shiny": false,
 						"gigantamax": false,
-						"level": 86,
+						"level": 76,
 						"moves": [
-							"hurricane",
-							"roost",
-							"icebeam",
-							"scald"
+							"earthquake",
+							"bounce",
+							"waterfall",
+							"dragondance"
 						],
-						"ability": "Water Absorb",
+						"ability": "Moxie",
 						"evs": {
 							"hp": 85,
-							"atk": 0,
+							"atk": 85,
 							"def": 85,
 							"spa": 85,
 							"spd": 85,
@@ -1195,273 +993,29 @@
 						},
 						"ivs": {
 							"hp": 31,
-							"atk": 0,
+							"atk": 31,
 							"def": 31,
 							"spa": 31,
 							"spd": 31,
 							"spe": 31
 						},
 						"item": "Heavy-Duty Boots"
-					}
-				}
-			],
-			"team": "123456",
-			"choice": {
-				"cantUndo": false,
-				"error": "Can't do anything: It's not your turn",
-				"actions": [],
-				"forcedSwitchesLeft": 0,
-				"forcedPassesLeft": 0,
-				"zMove": false,
-				"mega": false,
-				"ultra": false,
-				"dynamax": false,
-				"switchIns": []
-			}
-		},
-		{
-			"foe": "[Side:p1]",
-			"allySide": null,
-			"lastSelectedMove": "sludgewave",
-			"id": "p2",
-			"n": 1,
-			"name": "Balls",
-			"avatar": "",
-			"active": [
-				"[Pokemon:p2a]"
-			],
-			"pokemonLeft": 5,
-			"faintedLastTurn": null,
-			"faintedThisTurn": "[Pokemon:p2a]",
-			"zMoveUsed": false,
-			"dynamaxUsed": false,
-			"sideConditions": {},
-			"slotConditions": [
-				{}
-			],
-			"lastMove": null,
-			"pokemon": [
-				{
-					"m": {},
-					"baseSpecies": "[Species:toxtricity]",
-					"species": "[Species:toxtricity]",
-					"speciesState": {
-						"id": "toxtricity"
 					},
-					"gender": "F",
-					"gigantamax": false,
-					"moveSlots": [
-						{
-							"move": "Sludge Wave",
-							"id": "sludgewave",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "allAdjacent",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Shift Gear",
-							"id": "shiftgear",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "self",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Overdrive",
-							"id": "overdrive",
-							"pp": 14,
-							"maxpp": 16,
-							"target": "allAdjacentFoes",
-							"disabled": false,
-							"disabledSource": "",
-							"used": true
-						},
-						{
-							"move": "Boomburst",
-							"id": "boomburst",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "allAdjacent",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						}
-					],
-					"position": 0,
-					"details": "Toxtricity, L82, F",
-					"status": "fnt",
-					"statusState": {},
-					"volatiles": {},
-					"showCure": false,
-					"hpType": "Dragon",
-					"hpPower": 60,
-					"baseHpType": "Dragon",
-					"baseHpPower": 60,
-					"baseStoredStats": {
-						"atk": 165,
-						"def": 162,
-						"spa": 234,
-						"spd": 162,
-						"spe": 170,
-						"hp": 257
-					},
-					"storedStats": {
-						"atk": 165,
-						"def": 162,
-						"spa": 234,
-						"spd": 162,
-						"spe": 170
-					},
-					"boosts": {
-						"atk": 0,
-						"def": 0,
-						"spa": 0,
-						"spd": 0,
-						"spe": 0,
-						"accuracy": 0,
-						"evasion": 0
-					},
-					"baseAbility": "punkrock",
-					"ability": "punkrock",
-					"abilityState": {
-						"id": "punkrock",
-						"target": "[Pokemon:p2a]"
-					},
-					"item": "focussash",
-					"itemState": {
-						"id": "focussash",
-						"target": "[Pokemon:p2a]"
-					},
-					"lastItem": "",
-					"usedItemThisTurn": false,
-					"ateBerry": false,
-					"trapped": false,
-					"maybeTrapped": false,
-					"maybeDisabled": false,
-					"illusion": null,
-					"transformed": false,
-					"fainted": true,
-					"faintQueued": true,
-					"subFainted": null,
-					"types": [
-						"Electric",
-						"Poison"
-					],
-					"addedType": "",
-					"knownType": true,
-					"apparentType": "Electric/Poison",
-					"switchFlag": true,
-					"forceSwitchFlag": false,
-					"skipBeforeSwitchOutEventFlag": true,
-					"draggedIn": null,
-					"newlySwitched": true,
-					"beingCalledBack": false,
-					"lastMove": null,
-					"lastMoveUsed": null,
-					"moveThisTurn": "",
-					"statsRaisedThisTurn": false,
-					"statsLoweredThisTurn": false,
-					"hurtThisTurn": null,
-					"lastDamage": 0,
-					"attackedBy": [
-						{
-							"source": "[Pokemon:p1a]",
-							"damage": 154,
-							"move": "fierywrath",
-							"thisTurn": true,
-							"slot": "p1a",
-							"damageValue": 154
-						}
-					],
-					"isActive": false,
-					"activeTurns": 3,
-					"activeMoveActions": 2,
-					"previouslySwitchedIn": 1,
-					"truantTurn": false,
-					"isStarted": false,
-					"duringMove": false,
-					"weighthg": 400,
-					"speed": 170,
-					"abilityOrder": 1,
-					"canMegaEvo": null,
-					"canUltraBurst": null,
-					"canGigantamax": "G-Max Stun Shock",
-					"maxhp": 257,
-					"baseMaxhp": 257,
-					"hp": 0,
-					"moveLastTurnResult": true,
-					"lastMoveTargetLoc": 1,
-					"set": {
-						"name": "Toxtricity",
-						"species": "Toxtricity",
-						"gender": "",
-						"shiny": false,
-						"gigantamax": false,
-						"level": 82,
-						"moves": [
-							"sludgewave",
-							"shiftgear",
-							"overdrive",
-							"boomburst"
-						],
-						"ability": "Punk Rock",
-						"evs": {
-							"hp": 85,
-							"atk": 0,
-							"def": 85,
-							"spa": 85,
-							"spd": 85,
-							"spe": 85
-						},
-						"ivs": {
-							"hp": 31,
-							"atk": 0,
-							"def": 31,
-							"spa": 31,
-							"spd": 31,
-							"spe": 31
-						},
-						"item": "Focus Sash"
-					}
+					"percenthp": 1
 				},
 				{
 					"m": {},
-					"baseSpecies": "[Species:urshifu]",
-					"species": "[Species:urshifu]",
+					"baseSpecies": "[Species:raikou]",
+					"species": "[Species:raikou]",
 					"speciesState": {
-						"id": "urshifu"
+						"id": "raikou"
 					},
-					"gender": "M",
+					"gender": "",
 					"gigantamax": false,
 					"moveSlots": [
 						{
-							"move": "Sucker Punch",
-							"id": "suckerpunch",
-							"pp": 8,
-							"maxpp": 8,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Wicked Blow",
-							"id": "wickedblow",
-							"pp": 8,
-							"maxpp": 8,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Iron Head",
-							"id": "ironhead",
+							"move": "Thunderbolt",
+							"id": "thunderbolt",
 							"pp": 24,
 							"maxpp": 24,
 							"target": "normal",
@@ -1470,340 +1024,11 @@
 							"used": false
 						},
 						{
-							"move": "Close Combat",
-							"id": "closecombat",
-							"pp": 8,
-							"maxpp": 8,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						}
-					],
-					"position": 1,
-					"details": "Urshifu, L76, M",
-					"status": "",
-					"statusState": {},
-					"volatiles": {},
-					"showCure": false,
-					"hpType": "Dark",
-					"hpPower": 60,
-					"baseHpType": "Dark",
-					"baseHpPower": 60,
-					"baseStoredStats": {
-						"atk": 242,
-						"def": 196,
-						"spa": 140,
-						"spd": 135,
-						"spe": 191,
-						"hp": 277
-					},
-					"storedStats": {
-						"atk": 242,
-						"def": 196,
-						"spa": 140,
-						"spd": 135,
-						"spe": 191
-					},
-					"boosts": {
-						"atk": 0,
-						"def": 0,
-						"spa": 0,
-						"spd": 0,
-						"spe": 0,
-						"accuracy": 0,
-						"evasion": 0
-					},
-					"baseAbility": "unseenfist",
-					"ability": "unseenfist",
-					"abilityState": {
-						"id": "unseenfist"
-					},
-					"item": "choiceband",
-					"itemState": {
-						"id": "choiceband"
-					},
-					"lastItem": "",
-					"usedItemThisTurn": false,
-					"ateBerry": false,
-					"trapped": false,
-					"maybeTrapped": false,
-					"maybeDisabled": false,
-					"illusion": null,
-					"transformed": false,
-					"fainted": false,
-					"faintQueued": false,
-					"subFainted": null,
-					"types": [
-						"Fighting",
-						"Dark"
-					],
-					"addedType": "",
-					"knownType": true,
-					"apparentType": "Fighting/Dark",
-					"switchFlag": false,
-					"forceSwitchFlag": false,
-					"skipBeforeSwitchOutEventFlag": false,
-					"draggedIn": null,
-					"newlySwitched": true,
-					"beingCalledBack": false,
-					"lastMove": null,
-					"lastMoveUsed": null,
-					"moveThisTurn": "",
-					"statsRaisedThisTurn": false,
-					"statsLoweredThisTurn": false,
-					"hurtThisTurn": null,
-					"lastDamage": 0,
-					"attackedBy": [],
-					"isActive": false,
-					"activeTurns": 0,
-					"activeMoveActions": 0,
-					"previouslySwitchedIn": 0,
-					"truantTurn": false,
-					"isStarted": false,
-					"duringMove": false,
-					"weighthg": 1050,
-					"speed": 191,
-					"abilityOrder": 0,
-					"canMegaEvo": null,
-					"canUltraBurst": null,
-					"canGigantamax": "G-Max One Blow",
-					"maxhp": 277,
-					"baseMaxhp": 277,
-					"hp": 277,
-					"set": {
-						"name": "Urshifu",
-						"species": "Urshifu",
-						"gender": "",
-						"shiny": false,
-						"gigantamax": false,
-						"level": 76,
-						"moves": [
-							"suckerpunch",
-							"wickedblow",
-							"ironhead",
-							"closecombat"
-						],
-						"ability": "Unseen Fist",
-						"evs": {
-							"hp": 85,
-							"atk": 85,
-							"def": 85,
-							"spa": 85,
-							"spd": 85,
-							"spe": 85
-						},
-						"ivs": {
-							"hp": 31,
-							"atk": 31,
-							"def": 31,
-							"spa": 31,
-							"spd": 31,
-							"spe": 31
-						},
-						"item": "Choice Band"
-					}
-				},
-				{
-					"m": {},
-					"baseSpecies": "[Species:lycanrocdusk]",
-					"species": "[Species:lycanrocdusk]",
-					"speciesState": {
-						"id": "lycanrocdusk"
-					},
-					"gender": "F",
-					"gigantamax": false,
-					"moveSlots": [
-						{
-							"move": "Stone Edge",
-							"id": "stoneedge",
-							"pp": 8,
-							"maxpp": 8,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Psychic Fangs",
-							"id": "psychicfangs",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Close Combat",
-							"id": "closecombat",
-							"pp": 8,
-							"maxpp": 8,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Accelerock",
-							"id": "accelerock",
-							"pp": 32,
-							"maxpp": 32,
-							"target": "normal",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						}
-					],
-					"position": 2,
-					"details": "Lycanroc-Dusk, L80, F",
-					"status": "",
-					"statusState": {},
-					"volatiles": {},
-					"showCure": false,
-					"hpType": "Dark",
-					"hpPower": 60,
-					"baseHpType": "Dark",
-					"baseHpPower": 60,
-					"baseStoredStats": {
-						"atk": 233,
-						"def": 150,
-						"spa": 134,
-						"spd": 150,
-						"spe": 222,
-						"hp": 251
-					},
-					"storedStats": {
-						"atk": 233,
-						"def": 150,
-						"spa": 134,
-						"spd": 150,
-						"spe": 222
-					},
-					"boosts": {
-						"atk": 0,
-						"def": 0,
-						"spa": 0,
-						"spd": 0,
-						"spe": 0,
-						"accuracy": 0,
-						"evasion": 0
-					},
-					"baseAbility": "toughclaws",
-					"ability": "toughclaws",
-					"abilityState": {
-						"id": "toughclaws"
-					},
-					"item": "choiceband",
-					"itemState": {
-						"id": "choiceband"
-					},
-					"lastItem": "",
-					"usedItemThisTurn": false,
-					"ateBerry": false,
-					"trapped": false,
-					"maybeTrapped": false,
-					"maybeDisabled": false,
-					"illusion": null,
-					"transformed": false,
-					"fainted": false,
-					"faintQueued": false,
-					"subFainted": null,
-					"types": [
-						"Rock"
-					],
-					"addedType": "",
-					"knownType": true,
-					"apparentType": "Rock",
-					"switchFlag": false,
-					"forceSwitchFlag": false,
-					"skipBeforeSwitchOutEventFlag": false,
-					"draggedIn": null,
-					"newlySwitched": true,
-					"beingCalledBack": false,
-					"lastMove": null,
-					"lastMoveUsed": null,
-					"moveThisTurn": "",
-					"statsRaisedThisTurn": false,
-					"statsLoweredThisTurn": false,
-					"hurtThisTurn": null,
-					"lastDamage": 0,
-					"attackedBy": [],
-					"isActive": false,
-					"activeTurns": 0,
-					"activeMoveActions": 0,
-					"previouslySwitchedIn": 0,
-					"truantTurn": false,
-					"isStarted": false,
-					"duringMove": false,
-					"weighthg": 250,
-					"speed": 222,
-					"abilityOrder": 0,
-					"canMegaEvo": null,
-					"canUltraBurst": null,
-					"canGigantamax": null,
-					"maxhp": 251,
-					"baseMaxhp": 251,
-					"hp": 251,
-					"set": {
-						"name": "Lycanroc",
-						"species": "Lycanroc-Dusk",
-						"gender": "",
-						"shiny": false,
-						"gigantamax": false,
-						"level": 80,
-						"moves": [
-							"stoneedge",
-							"psychicfangs",
-							"closecombat",
-							"accelerock"
-						],
-						"ability": "Tough Claws",
-						"evs": {
-							"hp": 85,
-							"atk": 85,
-							"def": 85,
-							"spa": 85,
-							"spd": 85,
-							"spe": 85
-						},
-						"ivs": {
-							"hp": 31,
-							"atk": 31,
-							"def": 31,
-							"spa": 31,
-							"spd": 31,
-							"spe": 31
-						},
-						"item": "Choice Band"
-					}
-				},
-				{
-					"m": {},
-					"baseSpecies": "[Species:calyrex]",
-					"species": "[Species:calyrex]",
-					"speciesState": {
-						"id": "calyrex"
-					},
-					"gender": "",
-					"gigantamax": false,
-					"moveSlots": [
-						{
 							"move": "Calm Mind",
 							"id": "calmmind",
 							"pp": 32,
 							"maxpp": 32,
 							"target": "self",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Giga Drain",
-							"id": "gigadrain",
-							"pp": 16,
-							"maxpp": 16,
-							"target": "normal",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
@@ -1819,18 +1044,18 @@
 							"used": false
 						},
 						{
-							"move": "Psyshock",
-							"id": "psyshock",
-							"pp": 16,
-							"maxpp": 16,
+							"move": "Scald",
+							"id": "scald",
+							"pp": 24,
+							"maxpp": 24,
 							"target": "normal",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
 						}
 					],
-					"position": 3,
-					"details": "Calyrex, L88",
+					"position": 5,
+					"details": "Raikou, L80",
 					"status": "",
 					"statusState": {},
 					"volatiles": {},
@@ -1840,19 +1065,19 @@
 					"baseHpType": "Dragon",
 					"baseHpPower": 60,
 					"baseStoredStats": {
-						"atk": 145,
-						"def": 191,
-						"spa": 191,
-						"spd": 191,
-						"spe": 191,
-						"hp": 319
+						"atk": 141,
+						"def": 166,
+						"spa": 230,
+						"spd": 206,
+						"spe": 230,
+						"hp": 275
 					},
 					"storedStats": {
-						"atk": 145,
-						"def": 191,
-						"spa": 191,
-						"spd": 191,
-						"spe": 191
+						"atk": 141,
+						"def": 166,
+						"spa": 230,
+						"spd": 206,
+						"spe": 230
 					},
 					"boosts": {
 						"atk": 0,
@@ -1863,10 +1088,10 @@
 						"accuracy": 0,
 						"evasion": 0
 					},
-					"baseAbility": "unnerve",
-					"ability": "unnerve",
+					"baseAbility": "pressure",
+					"ability": "pressure",
 					"abilityState": {
-						"id": "unnerve"
+						"id": "pressure"
 					},
 					"item": "leftovers",
 					"itemState": {
@@ -1884,12 +1109,11 @@
 					"faintQueued": false,
 					"subFainted": null,
 					"types": [
-						"Psychic",
-						"Grass"
+						"Electric"
 					],
 					"addedType": "",
 					"knownType": true,
-					"apparentType": "Psychic/Grass",
+					"apparentType": "Electric",
 					"switchFlag": false,
 					"forceSwitchFlag": false,
 					"skipBeforeSwitchOutEventFlag": false,
@@ -1911,29 +1135,29 @@
 					"truantTurn": false,
 					"isStarted": false,
 					"duringMove": false,
-					"weighthg": 77,
-					"speed": 191,
+					"weighthg": 1780,
+					"speed": 230,
 					"abilityOrder": 0,
 					"canMegaEvo": null,
 					"canUltraBurst": null,
 					"canGigantamax": null,
-					"maxhp": 319,
-					"baseMaxhp": 319,
-					"hp": 319,
+					"maxhp": 275,
+					"baseMaxhp": 275,
+					"hp": 275,
 					"set": {
-						"name": "Calyrex",
-						"species": "Calyrex",
+						"name": "Raikou",
+						"species": "Raikou",
 						"gender": "N",
 						"shiny": false,
 						"gigantamax": false,
-						"level": 88,
+						"level": 80,
 						"moves": [
+							"thunderbolt",
 							"calmmind",
-							"gigadrain",
 							"substitute",
-							"psyshock"
+							"scald"
 						],
-						"ability": "Unnerve",
+						"ability": "Pressure",
 						"evs": {
 							"hp": 85,
 							"atk": 0,
@@ -1951,63 +1175,202 @@
 							"spe": 31
 						},
 						"item": "Leftovers"
+					},
+					"percenthp": 1
+				}
+			],
+			"team": "123456",
+			"choice": {
+				"cantUndo": false,
+				"error": "Can't move: You need a switch response",
+				"actions": [],
+				"forcedSwitchesLeft": 1,
+				"forcedPassesLeft": 0,
+				"zMove": false,
+				"mega": false,
+				"ultra": false,
+				"dynamax": false,
+				"switchIns": []
+			},
+			"volatiles": [],
+			"opponent": {
+				"durant": {
+					"name": "durant",
+					"types": [
+						"Bug",
+						"Steel"
+					],
+					"percenthp": 0.1095890410958904,
+					"baseStats": {
+						"hp": 58,
+						"attack": 109,
+						"defense": 112,
+						"special-attack": 48,
+						"special-defense": 48,
+						"speed": 109
 					}
 				},
+				"aromatisse": {
+					"name": "aromatisse",
+					"types": [
+						"Fairy"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 101,
+						"attack": 72,
+						"defense": 72,
+						"special-attack": 99,
+						"special-defense": 89,
+						"speed": 29
+					}
+				},
+				"arctozolt": {
+					"name": "arctozolt",
+					"types": [
+						"Electric",
+						"Ice"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 90,
+						"attack": 100,
+						"defense": 90,
+						"special-attack": 90,
+						"special-defense": 80,
+						"speed": 55
+					}
+				},
+				"melmetal": {
+					"name": "melmetal",
+					"types": [
+						"Steel"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 135,
+						"attack": 143,
+						"defense": 143,
+						"special-attack": 80,
+						"special-defense": 65,
+						"speed": 34
+					}
+				},
+				"articuno": {
+					"name": "articuno",
+					"types": [
+						"Ice",
+						"Flying"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 90,
+						"attack": 85,
+						"defense": 100,
+						"special-attack": 95,
+						"special-defense": 125,
+						"speed": 85
+					}
+				},
+				"togekiss": {
+					"name": "togekiss",
+					"types": [
+						"Fairy",
+						"Flying"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 85,
+						"attack": 50,
+						"defense": 95,
+						"special-attack": 120,
+						"special-defense": 115,
+						"speed": 80
+					}
+				}
+			}
+		},
+		{
+			"foe": "[Side:p1]",
+			"allySide": null,
+			"lastSelectedMove": "ironhead",
+			"id": "p2",
+			"n": 1,
+			"name": "Balls",
+			"avatar": "",
+			"active": [
+				"[Pokemon:p2a]"
+			],
+			"pokemonLeft": 6,
+			"faintedLastTurn": null,
+			"faintedThisTurn": null,
+			"zMoveUsed": false,
+			"dynamaxUsed": false,
+			"sideConditions": {},
+			"slotConditions": [
+				{}
+			],
+			"lastMove": null,
+			"pokemon": [
 				{
 					"m": {},
-					"baseSpecies": "[Species:virizion]",
-					"species": "[Species:virizion]",
+					"baseSpecies": "[Species:durant]",
+					"species": "[Species:durant]",
 					"speciesState": {
-						"id": "virizion"
+						"id": "durant"
 					},
-					"gender": "",
+					"gender": "M",
 					"gigantamax": false,
 					"moveSlots": [
 						{
-							"move": "Close Combat",
-							"id": "closecombat",
-							"pp": 8,
+							"move": "Superpower",
+							"id": "superpower",
+							"pp": 6,
 							"maxpp": 8,
 							"target": "normal",
 							"disabled": false,
 							"disabledSource": "",
-							"used": false
+							"used": true
 						},
 						{
-							"move": "Swords Dance",
-							"id": "swordsdance",
-							"pp": 32,
-							"maxpp": 32,
+							"move": "Hone Claws",
+							"id": "honeclaws",
+							"pp": 24,
+							"maxpp": 24,
 							"target": "self",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
 						},
 						{
-							"move": "Leaf Blade",
-							"id": "leafblade",
-							"pp": 24,
+							"move": "Iron Head",
+							"id": "ironhead",
+							"pp": 23,
 							"maxpp": 24,
 							"target": "normal",
 							"disabled": false,
 							"disabledSource": "",
-							"used": false
+							"used": true
 						},
 						{
-							"move": "Stone Edge",
-							"id": "stoneedge",
-							"pp": 8,
-							"maxpp": 8,
-							"target": "normal",
+							"move": "Rock Slide",
+							"id": "rockslide",
+							"pp": 14,
+							"maxpp": 16,
+							"target": "allAdjacentFoes",
 							"disabled": false,
 							"disabledSource": "",
-							"used": false
+							"used": true
 						}
 					],
-					"position": 4,
-					"details": "Virizion, L82",
-					"status": "",
-					"statusState": {},
+					"position": 0,
+					"details": "Durant, L78, M",
+					"status": "par",
+					"statusState": {
+						"id": "par",
+						"target": "[Pokemon:p2a]",
+						"source": "[Pokemon:p1a]"
+					},
 					"volatiles": {},
 					"showCure": false,
 					"hpType": "Dark",
@@ -2015,37 +1378,39 @@
 					"baseHpType": "Dark",
 					"baseHpPower": 60,
 					"baseStoredStats": {
-						"atk": 195,
-						"def": 165,
-						"spa": 195,
-						"spd": 259,
-						"spe": 224,
-						"hp": 283
+						"atk": 215,
+						"def": 220,
+						"spa": 120,
+						"spd": 120,
+						"spe": 215,
+						"hp": 219
 					},
 					"storedStats": {
-						"atk": 195,
-						"def": 165,
-						"spa": 195,
-						"spd": 259,
-						"spe": 224
+						"atk": 215,
+						"def": 220,
+						"spa": 120,
+						"spd": 120,
+						"spe": 215
 					},
 					"boosts": {
-						"atk": 0,
-						"def": 0,
+						"atk": -1,
+						"def": -1,
 						"spa": 0,
 						"spd": 0,
 						"spe": 0,
 						"accuracy": 0,
 						"evasion": 0
 					},
-					"baseAbility": "justified",
-					"ability": "justified",
+					"baseAbility": "hustle",
+					"ability": "hustle",
 					"abilityState": {
-						"id": "justified"
+						"id": "hustle",
+						"target": "[Pokemon:p2a]"
 					},
-					"item": "lumberry",
+					"item": "focussash",
 					"itemState": {
-						"id": "lumberry"
+						"id": "focussash",
+						"target": "[Pokemon:p2a]"
 					},
 					"lastItem": "",
 					"usedItemThisTurn": false,
@@ -2059,56 +1424,114 @@
 					"faintQueued": false,
 					"subFainted": null,
 					"types": [
-						"Grass",
-						"Fighting"
+						"Bug",
+						"Steel"
 					],
 					"addedType": "",
 					"knownType": true,
-					"apparentType": "Grass/Fighting",
+					"apparentType": "Bug/Steel",
 					"switchFlag": false,
 					"forceSwitchFlag": false,
 					"skipBeforeSwitchOutEventFlag": false,
 					"draggedIn": null,
-					"newlySwitched": true,
+					"newlySwitched": false,
 					"beingCalledBack": false,
-					"lastMove": null,
-					"lastMoveUsed": null,
-					"moveThisTurn": "",
+					"lastMove": {
+						"hit": 1,
+						"totalDamage": 32,
+						"moveHitData": {
+							"p1a": {
+								"crit": false,
+								"typeMod": 0,
+								"zBrokeProtect": false
+							}
+						},
+						"move": "[Move:ironhead]"
+					},
+					"lastMoveUsed": {
+						"hit": 1,
+						"totalDamage": 32,
+						"moveHitData": {
+							"p1a": {
+								"crit": false,
+								"typeMod": 0,
+								"zBrokeProtect": false
+							}
+						},
+						"move": "[Move:ironhead]"
+					},
+					"moveThisTurn": "ironhead",
 					"statsRaisedThisTurn": false,
 					"statsLoweredThisTurn": false,
 					"hurtThisTurn": null,
-					"lastDamage": 0,
-					"attackedBy": [],
-					"isActive": false,
-					"activeTurns": 0,
-					"activeMoveActions": 0,
-					"previouslySwitchedIn": 0,
+					"lastDamage": 32,
+					"attackedBy": [
+						{
+							"source": "[Pokemon:p1a]",
+							"damage": 40,
+							"move": "bodyslam",
+							"thisTurn": false,
+							"slot": "p1a",
+							"damageValue": 40
+						},
+						{
+							"source": "[Pokemon:p1a]",
+							"damage": 58,
+							"move": "darkestlariat",
+							"thisTurn": false,
+							"slot": "p1a",
+							"damageValue": 58
+						},
+						{
+							"source": "[Pokemon:p1a]",
+							"damage": 38,
+							"move": "bodyslam",
+							"thisTurn": false,
+							"slot": "p1a",
+							"damageValue": 38
+						},
+						{
+							"source": "[Pokemon:p1a]",
+							"damage": 59,
+							"move": "darkestlariat",
+							"thisTurn": false,
+							"slot": "p1a",
+							"damageValue": 59
+						}
+					],
+					"isActive": true,
+					"activeTurns": 6,
+					"activeMoveActions": 6,
+					"previouslySwitchedIn": 1,
 					"truantTurn": false,
-					"isStarted": false,
+					"isStarted": true,
 					"duringMove": false,
-					"weighthg": 2000,
-					"speed": 224,
-					"abilityOrder": 0,
+					"weighthg": 330,
+					"speed": 107,
+					"abilityOrder": 1,
 					"canMegaEvo": null,
 					"canUltraBurst": null,
 					"canGigantamax": null,
-					"maxhp": 283,
-					"baseMaxhp": 283,
-					"hp": 283,
+					"maxhp": 219,
+					"baseMaxhp": 219,
+					"hp": 24,
+					"moveLastTurnResult": true,
+					"moveThisTurnResult": true,
+					"lastMoveTargetLoc": 1,
 					"set": {
-						"name": "Virizion",
-						"species": "Virizion",
-						"gender": "N",
+						"name": "Durant",
+						"species": "Durant",
+						"gender": "",
 						"shiny": false,
 						"gigantamax": false,
-						"level": 82,
+						"level": 78,
 						"moves": [
-							"closecombat",
-							"swordsdance",
-							"leafblade",
-							"stoneedge"
+							"superpower",
+							"honeclaws",
+							"ironhead",
+							"rockslide"
 						],
-						"ability": "Justified",
+						"ability": "Hustle",
 						"evs": {
 							"hp": 85,
 							"atk": 85,
@@ -2125,22 +1548,33 @@
 							"spd": 31,
 							"spe": 31
 						},
-						"item": "Lum Berry"
-					}
+						"item": "Focus Sash"
+					},
+					"percenthp": 0.1095890410958904
 				},
 				{
 					"m": {},
-					"baseSpecies": "[Species:araquanid]",
-					"species": "[Species:araquanid]",
+					"baseSpecies": "[Species:aromatisse]",
+					"species": "[Species:aromatisse]",
 					"speciesState": {
-						"id": "araquanid"
+						"id": "aromatisse"
 					},
 					"gender": "M",
 					"gigantamax": false,
 					"moveSlots": [
 						{
-							"move": "Liquidation",
-							"id": "liquidation",
+							"move": "Moonblast",
+							"id": "moonblast",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Toxic",
+							"id": "toxic",
 							"pp": 16,
 							"maxpp": 16,
 							"target": "normal",
@@ -2149,60 +1583,50 @@
 							"used": false
 						},
 						{
-							"move": "Leech Life",
-							"id": "leechlife",
+							"move": "Wish",
+							"id": "wish",
 							"pp": 16,
 							"maxpp": 16,
-							"target": "normal",
+							"target": "self",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
 						},
 						{
-							"move": "Mirror Coat",
-							"id": "mirrorcoat",
-							"pp": 32,
-							"maxpp": 32,
-							"target": "scripted",
-							"disabled": false,
-							"disabledSource": "",
-							"used": false
-						},
-						{
-							"move": "Sticky Web",
-							"id": "stickyweb",
-							"pp": 32,
-							"maxpp": 32,
-							"target": "foeSide",
+							"move": "Protect",
+							"id": "protect",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "self",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
 						}
 					],
-					"position": 5,
-					"details": "Araquanid, L80, M",
+					"position": 1,
+					"details": "Aromatisse, L88, M",
 					"status": "",
 					"statusState": {},
 					"volatiles": {},
 					"showCure": false,
-					"hpType": "Dark",
+					"hpType": "Dragon",
 					"hpPower": 60,
-					"baseHpType": "Dark",
+					"baseHpType": "Dragon",
 					"baseHpPower": 60,
 					"baseStoredStats": {
-						"atk": 158,
-						"def": 193,
-						"spa": 126,
-						"spd": 257,
-						"spe": 113,
-						"hp": 239
+						"atk": 131,
+						"def": 177,
+						"spa": 225,
+						"spd": 207,
+						"spe": 101,
+						"hp": 321
 					},
 					"storedStats": {
-						"atk": 158,
-						"def": 193,
-						"spa": 126,
-						"spd": 257,
-						"spe": 113
+						"atk": 131,
+						"def": 177,
+						"spa": 225,
+						"spd": 207,
+						"spe": 101
 					},
 					"boosts": {
 						"atk": 0,
@@ -2213,14 +1637,14 @@
 						"accuracy": 0,
 						"evasion": 0
 					},
-					"baseAbility": "waterbubble",
-					"ability": "waterbubble",
+					"baseAbility": "aromaveil",
+					"ability": "aromaveil",
 					"abilityState": {
-						"id": "waterbubble"
+						"id": "aromaveil"
 					},
-					"item": "mysticwater",
+					"item": "leftovers",
 					"itemState": {
-						"id": "mysticwater"
+						"id": "leftovers"
 					},
 					"lastItem": "",
 					"usedItemThisTurn": false,
@@ -2234,12 +1658,11 @@
 					"faintQueued": false,
 					"subFainted": null,
 					"types": [
-						"Water",
-						"Bug"
+						"Fairy"
 					],
 					"addedType": "",
 					"knownType": true,
-					"apparentType": "Water/Bug",
+					"apparentType": "Fairy",
 					"switchFlag": false,
 					"forceSwitchFlag": false,
 					"skipBeforeSwitchOutEventFlag": false,
@@ -2261,31 +1684,207 @@
 					"truantTurn": false,
 					"isStarted": false,
 					"duringMove": false,
-					"weighthg": 820,
-					"speed": 113,
+					"weighthg": 155,
+					"speed": 101,
 					"abilityOrder": 0,
 					"canMegaEvo": null,
 					"canUltraBurst": null,
 					"canGigantamax": null,
-					"maxhp": 239,
-					"baseMaxhp": 239,
-					"hp": 239,
+					"maxhp": 321,
+					"baseMaxhp": 321,
+					"hp": 321,
 					"set": {
-						"name": "Araquanid",
-						"species": "Araquanid",
+						"name": "Aromatisse",
+						"species": "Aromatisse",
 						"gender": "",
 						"shiny": false,
 						"gigantamax": false,
-						"level": 80,
+						"level": 88,
 						"moves": [
-							"liquidation",
-							"leechlife",
-							"mirrorcoat",
-							"stickyweb"
+							"moonblast",
+							"toxic",
+							"wish",
+							"protect"
 						],
-						"ability": "Water Bubble",
+						"ability": "Aroma Veil",
 						"evs": {
-							"hp": 81,
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:arctozolt]",
+					"species": "[Species:arctozolt]",
+					"speciesState": {
+						"id": "arctozolt"
+					},
+					"gender": "",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Icicle Crash",
+							"id": "iciclecrash",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Freeze-Dry",
+							"id": "freezedry",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Stomping Tantrum",
+							"id": "stompingtantrum",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Bolt Beak",
+							"id": "boltbeak",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 2,
+					"details": "Arctozolt, L86",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 221,
+						"def": 204,
+						"spa": 204,
+						"spd": 187,
+						"spe": 144,
+						"hp": 295
+					},
+					"storedStats": {
+						"atk": 221,
+						"def": 204,
+						"spa": 204,
+						"spd": 187,
+						"spe": 144
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "voltabsorb",
+					"ability": "voltabsorb",
+					"abilityState": {
+						"id": "voltabsorb"
+					},
+					"item": "assaultvest",
+					"itemState": {
+						"id": "assaultvest"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Electric",
+						"Ice"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Electric/Ice",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 1500,
+					"speed": 144,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 295,
+					"baseMaxhp": 295,
+					"hp": 295,
+					"set": {
+						"name": "Arctozolt",
+						"species": "Arctozolt",
+						"gender": "N",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 86,
+						"moves": [
+							"iciclecrash",
+							"freezedry",
+							"stompingtantrum",
+							"boltbeak"
+						],
+						"ability": "Volt Absorb",
+						"evs": {
+							"hp": 85,
 							"atk": 85,
 							"def": 85,
 							"spa": 85,
@@ -2300,34 +1899,658 @@
 							"spd": 31,
 							"spe": 31
 						},
-						"item": "Mystic Water"
-					}
+						"item": "Assault Vest"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:melmetal]",
+					"species": "[Species:melmetal]",
+					"speciesState": {
+						"id": "melmetal"
+					},
+					"gender": "",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Double Iron Bash",
+							"id": "doubleironbash",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Earthquake",
+							"id": "earthquake",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacent",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Superpower",
+							"id": "superpower",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Thunder Wave",
+							"id": "thunderwave",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 3,
+					"details": "Melmetal, L74",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 255,
+						"def": 255,
+						"spa": 161,
+						"spd": 139,
+						"spe": 93,
+						"hp": 322
+					},
+					"storedStats": {
+						"atk": 255,
+						"def": 255,
+						"spa": 161,
+						"spd": 139,
+						"spe": 93
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "ironfist",
+					"ability": "ironfist",
+					"abilityState": {
+						"id": "ironfist"
+					},
+					"item": "leftovers",
+					"itemState": {
+						"id": "leftovers"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Steel"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Steel",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 8000,
+					"speed": 93,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": "G-Max Meltdown",
+					"maxhp": 322,
+					"baseMaxhp": 322,
+					"hp": 322,
+					"set": {
+						"name": "Melmetal",
+						"species": "Melmetal",
+						"gender": "N",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 74,
+						"moves": [
+							"doubleironbash",
+							"earthquake",
+							"superpower",
+							"thunderwave"
+						],
+						"ability": "Iron Fist",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:articuno]",
+					"species": "[Species:articuno]",
+					"speciesState": {
+						"id": "articuno"
+					},
+					"gender": "",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Freeze-Dry",
+							"id": "freezedry",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Toxic",
+							"id": "toxic",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Roost",
+							"id": "roost",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Defog",
+							"id": "defog",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 4,
+					"details": "Articuno, L84",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 147,
+						"def": 216,
+						"spa": 208,
+						"spd": 258,
+						"spe": 191,
+						"hp": 288
+					},
+					"storedStats": {
+						"atk": 147,
+						"def": 216,
+						"spa": 208,
+						"spd": 258,
+						"spe": 191
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "pressure",
+					"ability": "pressure",
+					"abilityState": {
+						"id": "pressure"
+					},
+					"item": "heavydutyboots",
+					"itemState": {
+						"id": "heavydutyboots"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Ice",
+						"Flying"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Ice/Flying",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 554,
+					"speed": 191,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 288,
+					"baseMaxhp": 288,
+					"hp": 288,
+					"set": {
+						"name": "Articuno",
+						"species": "Articuno",
+						"gender": "N",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 84,
+						"moves": [
+							"freezedry",
+							"toxic",
+							"roost",
+							"defog"
+						],
+						"ability": "Pressure",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Heavy-Duty Boots"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:togekiss]",
+					"species": "[Species:togekiss]",
+					"speciesState": {
+						"id": "togekiss"
+					},
+					"gender": "M",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Nasty Plot",
+							"id": "nastyplot",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Air Slash",
+							"id": "airslash",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "any",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Aura Sphere",
+							"id": "aurasphere",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "any",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Roost",
+							"id": "roost",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 5,
+					"details": "Togekiss, L80, M",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 85,
+						"def": 198,
+						"spa": 238,
+						"spd": 230,
+						"spe": 174,
+						"hp": 267
+					},
+					"storedStats": {
+						"atk": 85,
+						"def": 198,
+						"spa": 238,
+						"spd": 230,
+						"spe": 174
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "serenegrace",
+					"ability": "serenegrace",
+					"abilityState": {
+						"id": "serenegrace"
+					},
+					"item": "leftovers",
+					"itemState": {
+						"id": "leftovers"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Fairy",
+						"Flying"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Fairy/Flying",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 380,
+					"speed": 174,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 267,
+					"baseMaxhp": 267,
+					"hp": 267,
+					"set": {
+						"name": "Togekiss",
+						"species": "Togekiss",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 80,
+						"moves": [
+							"nastyplot",
+							"airslash",
+							"aurasphere",
+							"roost"
+						],
+						"ability": "Serene Grace",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 1
 				}
 			],
 			"team": "123456",
 			"choice": {
 				"cantUndo": false,
-				"error": "Can't move: You need a switch response",
+				"error": "Can't do anything: It's not your turn",
 				"actions": [],
-				"forcedSwitchesLeft": 1,
+				"forcedSwitchesLeft": 0,
 				"forcedPassesLeft": 0,
 				"zMove": false,
 				"mega": false,
 				"ultra": false,
 				"dynamax": false,
 				"switchIns": []
+			},
+			"volatiles": [],
+			"opponent": {
+				"snorlax": {
+					"name": "snorlax",
+					"types": [
+						"Normal"
+					],
+					"percenthp": 0,
+					"baseStats": {
+						"hp": 160,
+						"attack": 110,
+						"defense": 65,
+						"special-attack": 65,
+						"special-defense": 110,
+						"speed": 30
+					}
+				},
+				"incineroar": {
+					"name": "incineroar",
+					"types": [
+						"Fire",
+						"Dark"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 95,
+						"attack": 115,
+						"defense": 90,
+						"special-attack": 80,
+						"special-defense": 90,
+						"speed": 60
+					}
+				},
+				"beheeyem": {
+					"name": "beheeyem",
+					"types": [
+						"Psychic"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 75,
+						"attack": 75,
+						"defense": 75,
+						"special-attack": 125,
+						"special-defense": 95,
+						"speed": 40
+					}
+				},
+				"whimsicott": {
+					"name": "whimsicott",
+					"types": [
+						"Grass",
+						"Fairy"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 60,
+						"attack": 67,
+						"defense": 85,
+						"special-attack": 77,
+						"special-defense": 75,
+						"speed": 116
+					}
+				},
+				"gyarados": {
+					"name": "gyarados",
+					"types": [
+						"Water",
+						"Flying"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 95,
+						"attack": 125,
+						"defense": 79,
+						"special-attack": 60,
+						"special-defense": 100,
+						"speed": 81
+					}
+				},
+				"raikou": {
+					"name": "raikou",
+					"types": [
+						"Electric"
+					],
+					"percenthp": 1,
+					"baseStats": {
+						"hp": 90,
+						"attack": 85,
+						"defense": 75,
+						"special-attack": 115,
+						"special-defense": 100,
+						"speed": 115
+					}
+				}
 			}
 		}
 	],
 	"prng": [
-		40243,
-		52901,
-		49556,
-		51115
+		30431,
+		60441,
+		53180,
+		5422
 	],
 	"hints": [],
 	"log": [
-		"|t:|1640218851",
+		"|t:|1640711845",
 		"|gametype|singles",
 		"|player|p1|Cock||",
 		"|player|p2|Balls||",
@@ -2339,57 +2562,100 @@
 		"|rule|HP Percentage Mod: HP is shown in percentages",
 		"|rule|Sleep Clause Mod: Limit one foe put to sleep",
 		"|",
-		"|t:|1640218851",
+		"|t:|1640711845",
 		"|start",
 		"|split|p1",
-		"|switch|p1a: Moltres|Moltres-Galar, L76|262/262",
-		"|switch|p1a: Moltres|Moltres-Galar, L76|100/100",
+		"|switch|p1a: Snorlax|Snorlax, L82, F|397/397",
+		"|switch|p1a: Snorlax|Snorlax, L82, F|100/100",
 		"|split|p2",
-		"|switch|p2a: Toxtricity|Toxtricity, L82, F|257/257",
-		"|switch|p2a: Toxtricity|Toxtricity, L82, F|100/100",
+		"|switch|p2a: Durant|Durant, L78, M|219/219",
+		"|switch|p2a: Durant|Durant, L78, M|100/100",
 		"|turn|1",
 		"|",
-		"|t:|1640218851",
-		"|move|p1a: Moltres|Fiery Wrath|p2a: Toxtricity",
-		"|split|p2",
-		"|-damage|p2a: Toxtricity|154/257",
-		"|-damage|p2a: Toxtricity|60/100",
-		"|move|p2a: Toxtricity|Overdrive|p1a: Moltres",
-		"|-supereffective|p1a: Moltres",
+		"|t:|1640711845",
+		"|move|p2a: Durant|Rock Slide|p1a: Snorlax",
 		"|split|p1",
-		"|-damage|p1a: Moltres|64/262",
-		"|-damage|p1a: Moltres|25/100",
-		"|-ability|p1a: Moltres|Berserk|boost",
-		"|-boost|p1a: Moltres|spa|1",
+		"|-damage|p1a: Snorlax|307/397",
+		"|-damage|p1a: Snorlax|78/100",
+		"|cant|p1a: Snorlax|flinch",
 		"|",
+		"|split|p1",
+		"|-heal|p1a: Snorlax|331/397|[from] item: Leftovers",
+		"|-heal|p1a: Snorlax|84/100|[from] item: Leftovers",
 		"|upkeep",
 		"|turn|2",
 		"|",
-		"|t:|1640218851",
-		"|move|p1a: Moltres|Rest|p1a: Moltres",
-		"|-status|p1a: Moltres|slp|[from] move: Rest",
+		"|t:|1640711845",
+		"|move|p2a: Durant|Rock Slide|p1a: Snorlax",
 		"|split|p1",
-		"|-heal|p1a: Moltres|262/262 slp|[silent]",
-		"|-heal|p1a: Moltres|100/100 slp|[silent]",
-		"|-enditem|p1a: Moltres|Chesto Berry|[eat]",
-		"|-curestatus|p1a: Moltres|slp|[msg]",
-		"|move|p2a: Toxtricity|Overdrive|p1a: Moltres",
-		"|-supereffective|p1a: Moltres",
-		"|split|p1",
-		"|-damage|p1a: Moltres|68/262",
-		"|-damage|p1a: Moltres|26/100",
-		"|-ability|p1a: Moltres|Berserk|boost",
-		"|-boost|p1a: Moltres|spa|1",
+		"|-damage|p1a: Snorlax|228/397",
+		"|-damage|p1a: Snorlax|58/100",
+		"|move|p1a: Snorlax|Body Slam|p2a: Durant",
+		"|-resisted|p2a: Durant",
+		"|split|p2",
+		"|-damage|p2a: Durant|179/219",
+		"|-damage|p2a: Durant|82/100",
+		"|-status|p2a: Durant|par",
 		"|",
+		"|split|p1",
+		"|-heal|p1a: Snorlax|252/397|[from] item: Leftovers",
+		"|-heal|p1a: Snorlax|64/100|[from] item: Leftovers",
 		"|upkeep",
 		"|turn|3",
 		"|",
-		"|t:|1640218851",
-		"|move|p1a: Moltres|Fiery Wrath|p2a: Toxtricity",
+		"|t:|1640711845",
+		"|cant|p2a: Durant|par",
+		"|move|p1a: Snorlax|Darkest Lariat|p2a: Durant",
 		"|split|p2",
-		"|-damage|p2a: Toxtricity|0 fnt",
-		"|-damage|p2a: Toxtricity|0 fnt",
-		"|faint|p2a: Toxtricity",
+		"|-damage|p2a: Durant|121/219 par",
+		"|-damage|p2a: Durant|56/100 par",
+		"|",
+		"|split|p1",
+		"|-heal|p1a: Snorlax|276/397|[from] item: Leftovers",
+		"|-heal|p1a: Snorlax|70/100|[from] item: Leftovers",
+		"|upkeep",
+		"|turn|4",
+		"|",
+		"|t:|1640711845",
+		"|move|p2a: Durant|Superpower|p1a: Snorlax|[miss]",
+		"|-miss|p2a: Durant|p1a: Snorlax",
+		"|move|p1a: Snorlax|Body Slam|p2a: Durant",
+		"|-resisted|p2a: Durant",
+		"|split|p2",
+		"|-damage|p2a: Durant|83/219 par",
+		"|-damage|p2a: Durant|38/100 par",
+		"|",
+		"|split|p1",
+		"|-heal|p1a: Snorlax|300/397|[from] item: Leftovers",
+		"|-heal|p1a: Snorlax|76/100|[from] item: Leftovers",
+		"|upkeep",
+		"|turn|5",
+		"|",
+		"|t:|1640711845",
+		"|move|p2a: Durant|Superpower|p1a: Snorlax",
+		"|-supereffective|p1a: Snorlax",
+		"|split|p1",
+		"|-damage|p1a: Snorlax|8/397",
+		"|-damage|p1a: Snorlax|3/100",
+		"|-unboost|p2a: Durant|atk|1",
+		"|-unboost|p2a: Durant|def|1",
+		"|move|p1a: Snorlax|Darkest Lariat|p2a: Durant",
+		"|split|p2",
+		"|-damage|p2a: Durant|24/219 par",
+		"|-damage|p2a: Durant|11/100 par",
+		"|",
+		"|split|p1",
+		"|-heal|p1a: Snorlax|32/397|[from] item: Leftovers",
+		"|-heal|p1a: Snorlax|9/100|[from] item: Leftovers",
+		"|upkeep",
+		"|turn|6",
+		"|",
+		"|t:|1640711845",
+		"|move|p2a: Durant|Iron Head|p1a: Snorlax",
+		"|split|p1",
+		"|-damage|p1a: Snorlax|0 fnt",
+		"|-damage|p1a: Snorlax|0 fnt",
+		"|faint|p1a: Snorlax",
 		"|",
 		"|upkeep"
 	],

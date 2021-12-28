@@ -3,31 +3,54 @@ const Sim = require("pokemon-showdown");
 const fs = require("fs");
 const spawn = require("child_process").spawn;
 const { randomInt } = require('crypto');
+const https = require('https');
+const smogon_api = 'https://smogon-usage-stats.herokuapp.com/2019/12/gen8randombattle/1630/';
 
-// /*
-// Get a random team using the Pokemon Showdown API.
-// */
-// function getTeam() {
-// var options = {format: "gen8ou"};
-// var team = Teams.generate("gen8randombattle", options);
-// return team;
-// }
+const dex = JSON.parse(fs.readFileSync('./bin/pokedex.json'));
 
 stream = new Sim.BattleStream();
 
+// Get live state of game
 (async () => {
     for await (var output of stream) {
-        // const pp = spawn("python", ["C:/Users/rshet/Documents/IChooseYou.ML/Python/stream_reader.py", "output", output]);
-        fs.writeFileSync("./bin/request.json", JSON.stringify(stream.battle.toJSON(), null, "\t"));
+        let msg = output.split("|");
+
+        if (msg.includes("turn")) {
+            let data = stream.battle.toJSON();
+
+            // Adding data for each side
+            data.sides.forEach(side => {         
+                side.volatiles = [];
+                side.opponent = {};
+                let other = side == data.sides[0] ? data.sides[1] : data.sides[0];
+
+                side.pokemon.forEach(mon => {
+                    // Get HP% for each pokemon
+                    mon.percenthp = 1.0 * mon.hp / mon.maxhp // ensure float division
+
+                    // Create list of volatiles for each side
+                    for (let i=0; i < Object.keys(mon.volatiles).length; i++) {
+                        side.volatiles.push(mon.volatiles[Object.keys(mon.volatiles)[i]]);
+                    }
+                });
+
+                // Set opposing pokemon data
+                other.pokemon.forEach(mon => {
+                    side.opponent[mon.speciesState.id] = {};
+                    side.opponent[mon.speciesState.id].name = mon.speciesState.id;
+                    side.opponent[mon.speciesState.id].types = mon.types;
+                    side.opponent[mon.speciesState.id].percenthp = 1.0 * mon.hp / mon.maxhp;
+                    side.opponent[mon.speciesState.id].baseStats = dex[mon.speciesState.id].baseStats;
+                });
+            });
+
+            // Write data to request file for model use
+            fs.writeFileSync("./bin/request.json", JSON.stringify(data, null, "\t"));
+        }
     }
 })();
 
+// TESTING
 stream.write(`>start {"formatid":"gen8randombattle"}`);
 stream.write(`>player p1 {"name":"Cock"}`);
 stream.write(`>player p2 {"name":"Balls"}`);
-for (let i=0; i < 30; i++) {
-    stream.write(`>p1 move ` + randomInt(1, 5));
-    stream.write(`>p2 move ` + randomInt(1, 5));
-}
-
-
