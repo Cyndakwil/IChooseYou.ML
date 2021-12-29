@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 """
 MODEL HYPERPARAMETERS
@@ -113,7 +114,8 @@ class FightNet(nn.Module):
         self.sigmoid = nn.Sigmoid()
         self.log_softmax = nn.LogSoftmax(dim = 1)
 
-        self.conv1 = nn.Conv2d(1, 256, (FN_INPUT_DIM, 3), padding = (0, 1), bias = False)
+        self.conv1 = nn.Conv2d(1, 256, (FN_INPUT_DIM, 3), padding = 0, bias = False)
+        self.pad_c1 = nn.ConstantPad2d((2, 0, 0, 0), 0)
         self.bn_c1 = nn.BatchNorm2d(256)
 
         self.conv2 = nn.Conv2d(1, 256, (256, 3), padding = 0, bias = False)
@@ -139,11 +141,12 @@ class FightNet(nn.Module):
         returns: (torch.Tensor (11,)) output tensor
         """
         # (batch_size, 1, FN_INPUT_DIM, 3)
+        x = self.pad_c1(x)                  # (batch_size, 1, FN_INPUT_DIM, 5)
         x = self.conv1(x)                   # (batch_size, 256, 1, 3)
         x = self.bn_c1(x)
         x = self.lrelu(x)
         x = self.dropout(x)
-        x = torch.permute(x, (0, 2, 1, 3))     # (batch_size, 1, 256, 3)
+        x = torch.permute(x, (0, 2, 1, 3))  # (batch_size, 1, 256, 3)
 
         x = self.conv2(x)                   # (batch_size, 256, 1, 1)
         x = x.view(x.size()[0], 256)        # (batch_size, 256)
@@ -162,7 +165,7 @@ class FightNet(nn.Module):
         x = self.dropout(x)
 
         x = x + self.fc3(x) # Skip connection
-        x = self.bn_fc2(x)
+        x = self.bn_fc3(x)
         x = self.lrelu(x)
         x = self.dropout(x)
 
