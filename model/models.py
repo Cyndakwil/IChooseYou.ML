@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from structs import Pokemon, FightState
 
 """
 MODEL HYPERPARAMETERS
@@ -25,8 +26,8 @@ FIELD_ATTRIB_VEC_DIM = 20
 N_TYPE = 18
 TYPE_VEC_DIM = 18
 
-N_STATUS = 7
-STATUS_VEC_DIM = 7
+N_STATUS = 8
+STATUS_VEC_DIM = 8
 
 # FightNet
 FN_DROPOUT_P = 0.5
@@ -91,6 +92,33 @@ class EntityEmbedding(nn.Module):
         return self.embedding.weight[:, idx]
 
 
+class InputEncoder(nn.Module):
+    """ Handles embedding and encoding of fight data
+    """
+    def __init__(self):
+        """ Constructor
+        """
+        super(InputEncoder, self).__init__()
+
+        # Embedding models
+        self.move2vec = EntityEmbedding(N_MOVE, MOVE_VEC_DIM)
+        self.item2vec = EntityEmbedding(N_ITEM, ITEM_VEC_DIM)
+        self.ability2vec = EntityEmbedding(N_ABILITY, ABILITY_VEC_DIM)
+        self.sideattrib2vec = EntityEmbedding(N_SIDE_ATTRIB, SIDE_ATTRIB_VEC_DIM)
+        self.fieldattrib2vec = EntityEmbedding(N_FIELD_ATTRIB, FIELD_ATTRIB_VEC_DIM)
+        self.type2vec = EntityEmbedding(N_TYPE, TYPE_VEC_DIM)
+        self.status2vec = EntityEmbedding(N_STATUS, STATUS_VEC_DIM)
+    
+    def encoding(self, fight_states):
+        """ Serialize a list of 3 fight_states into a (FN_INPUT_DIM, 3) tensor
+        """
+        # TODO implement InputEncoder encoding function
+        return
+    
+    def __call__(self, fight_states):
+        return self.encoding()
+
+
 class FightNet(nn.Module):
     """ Model as specified in pocvketmnans doc
     """
@@ -99,14 +127,7 @@ class FightNet(nn.Module):
         """
         super(FightNet, self).__init__()
 
-        # Embedding layers
-        self.move2vec = EntityEmbedding(N_MOVE, MOVE_VEC_DIM)
-        self.item2vec = EntityEmbedding(N_ITEM, ITEM_VEC_DIM)
-        self.ability2vec = EntityEmbedding(N_ABILITY, ABILITY_VEC_DIM)
-        self.sideattrib2vec = EntityEmbedding(N_SIDE_ATTRIB, SIDE_ATTRIB_VEC_DIM)
-        self.fieldattrib2vec = EntityEmbedding(N_FIELD_ATTRIB, FIELD_ATTRIB_VEC_DIM)
-        self.type2vec = EntityEmbedding(N_TYPE, TYPE_VEC_DIM)
-        self.status2vec = EntityEmbedding(N_STATUS, STATUS_VEC_DIM)
+        self.output = None # Stores output tensor from previous forward pass
 
         # Model
         self.dropout = nn.Dropout(p = FN_DROPOUT_P)
@@ -130,7 +151,7 @@ class FightNet(nn.Module):
         self.fc3 = nn.Linear(128, 128)
         self.bn_fc3 = nn.BatchNorm1d(128)
 
-        self.output = nn.Linear(128, 11)
+        self.out_fc = nn.Linear(128, 11)
 
     def forward(self, x):
         """ Forward pass through network
@@ -169,15 +190,52 @@ class FightNet(nn.Module):
         x = self.lrelu(x)
         x = self.dropout(x)
 
-        x = self.output(x)                  # (batch_size, 11)
+        x = self.out_fc(x)                  # (batch_size, 11)
         x[:, :9] = self.log_softmax(x[:, :9])   # Softmax on possible actions
         x[:,  9] = self.sigmoid(x[:,  9])       # Sigmoid on dynamax
         x[:, 10] = self.sigmoid(x[:, 10])       # Sigmoid on win percentage
 
+        self.output = x
         return x
     
     def __call__(self, x):
         return self.forward(x)
+    
+    def move_prob(self):
+        """ Returns output probabilities for each move
+
+        returns: (torch.Tensor (4,) or (batch_size, 4), depending on batch size)
+        """
+        if not torch.is_tensor(self.output):
+            raise AttributeError("Referencing model ouput before forward pass.")
+        return torch.exp(self.output[:, :4]).squeeze()
+    
+    def swap_prob(self):
+        """ Returns output probabilities for each move
+
+        returns: (torch.Tensor (4,) or (batch_size, 4), depending on batch size)
+        """
+        if not torch.is_tensor(self.output):
+            raise AttributeError("Referencing model ouput before forward pass.")
+        return torch.exp(self.output[:, 4:9]).squeeze()
+    
+    def dynamax_prob(self):
+        """ Returns probability of dynamax
+
+        returns: (torch.Tensor (batch_size,) or (0,), depending on batch size)
+        """
+        if not torch.is_tensor(self.output):
+            raise AttributeError("Referencing model ouput before forward pass.")
+        return self.output[:, 9].squeeze()
+    
+    def win_prob(self):
+        """ Returns probability of winning from previously given position
+
+        returns: (torch.Tensor (batch_size,) or (0,), depending on batch size)
+        """
+        if not torch.is_tensor(self.output):
+            raise AttributeError("Referencing model ouput before forward pass.")
+        return self.output[:, 10].squeeze()
 
 
 # Tests
@@ -195,3 +253,10 @@ if __name__ == "__main__":
     assert torch.allclose(torch.exp(y)[:, :9].sum(dim = 1), torch.ones(32))
     assert y.shape == (32, 11)
     summary(test_fn, input_size = (32, 1, FN_INPUT_DIM, 3))
+    print()
+    print("FROM TEST CALL:")
+    print("---------------")
+    print("Move probabilities:", test_fn.move_prob()[0])
+    print("Swap probabilities:", test_fn.swap_prob()[0])
+    print("Dynamax probability:", test_fn.dynamax_prob()[0])
+    print("Win probability:", test_fn.win_prob()[0])
