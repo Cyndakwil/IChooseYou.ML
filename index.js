@@ -7,6 +7,7 @@ const https = require('https');
 const smogon_api = 'https://smogon-usage-stats.herokuapp.com/2019/12/gen8randombattle/1630/';
 
 const dex = JSON.parse(fs.readFileSync('./bin/pokedex.json'));
+const genericInfo = JSON.parse(fs.readFileSync('./data/randomdata.json'));
 
 stream = new Sim.BattleStream();
 
@@ -41,6 +42,9 @@ stream = new Sim.BattleStream();
                     side.opponent[mon.speciesState.id].types = mon.types;
                     side.opponent[mon.speciesState.id].percenthp = 1.0 * mon.hp / mon.maxhp;
                     side.opponent[mon.speciesState.id].baseStats = dex[mon.speciesState.id].baseStats;
+                    side.opponent[mon.speciesState.id].moves = genericInfo[mon.speciesState.id].randomBattleMoves;
+                    side.opponent[mon.speciesState.id].items = genericInfo[mon.speciesState.id].items;
+                    side.opponent[mon.speciesState.id].abilities = genericInfo[mon.speciesState.id].abilities;
                 });
             });
 
