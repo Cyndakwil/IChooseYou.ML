@@ -2,57 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from structs import Pokemon, FightState
-
-"""
-MODEL HYPERPARAMETERS
-"""
-
-# Embedding models
-N_MOVE = 297
-MOVE_VEC_DIM = 50
-
-N_ITEM = 61
-ITEM_VEC_DIM = 50
-
-N_ABILITY = 182
-ABILITY_VEC_DIM = 50
-
-N_SIDE_ATTRIB = 100
-SIDE_ATTRIB_VEC_DIM = 100
-
-N_FIELD_ATTRIB = 20
-FIELD_ATTRIB_VEC_DIM = 20
-
-N_TYPE = 18
-TYPE_VEC_DIM = 18
-
-N_STATUS = 8
-STATUS_VEC_DIM = 8
-
-# FightNet
-FN_DROPOUT_P = 0.5
-FN_LRELU_NEGATIVE_SLOPE = 0.01
-FN_INPUT_DIM =  FIELD_ATTRIB_VEC_DIM + \
-                2 + \
-                SIDE_ATTRIB_VEC_DIM + \
-                6*(
-                    4*MOVE_VEC_DIM + \
-                    ITEM_VEC_DIM + \
-                    ABILITY_VEC_DIM + \
-                    TYPE_VEC_DIM + \
-                    STATUS_VEC_DIM + \
-                    1 + 5 + 5
-                ) + \
-                2 + \
-                SIDE_ATTRIB_VEC_DIM + \
-                6*(
-                    MOVE_VEC_DIM + \
-                    ITEM_VEC_DIM + \
-                    ABILITY_VEC_DIM + \
-                    TYPE_VEC_DIM + \
-                    STATUS_VEC_DIM + \
-                    1 + 5
-                )
+from utils import one_hot_encode, input_vector_summary
+from config import *
 
 class EntityEmbedding(nn.Module):
     """ Entity embedding layer
@@ -110,13 +61,101 @@ class InputEncoder(nn.Module):
         self.status2vec = EntityEmbedding(N_STATUS, STATUS_VEC_DIM)
     
     def encoding(self, fight_states):
-        """ Serialize a list of 3 fight_states into a (FN_INPUT_DIM, 3) tensor
+        """ Serialize a list of fight_states into a (FN_INPUT_DIM, len(fight_states)) tensor
+            Fight states should be in chronological order starting from left to right
+
+        args:
+        fight_states -- list of FightState objects
         """
-        # TODO implement InputEncoder encoding function
-        return
+        # List of input subvectors for each fight state
+        encoded_subvectors = [[] for _ in range(len(fight_states))]
+        for i in range(len(fight_states)):
+            state = fight_states[i]
+            arr = encoded_subvectors[i] # Reference to relevant array of subvectors
+            
+            # 1. Battlefield attributes
+            field_attrib_oh = one_hot_encode(state.field_attrib, N_FIELD_ATTRIB)
+            arr.append(self.fieldattrib2vec(field_attrib_oh))
+
+            # 2. Player info
+            # a. Dynamax info
+            arr.append(torch.Tensor([state.used_dynamax, state.remaining_dynamax]))
+
+            # b. Side attributes
+            side_attrib_oh = one_hot_encode(state.side_attrib, N_SIDE_ATTRIB)
+            arr.append(self.sideattrib2vec(side_attrib_oh))
+
+            # c. Pokemon info
+            for pokemon in state.pokemon:
+                # i. moves
+                for move in pokemon.moves:
+                    move_oh = one_hot_encode([move], N_MOVE)
+                    arr.append(self.move2vec(move_oh))
+                
+                # ii. items
+                item_oh = one_hot_encode(pokemon.items, N_ITEM)
+                arr.append(self.item2vec(item_oh) / len(pokemon.items))
+
+                # iii. abilities
+                ability_oh = one_hot_encode(pokemon.abilities, N_ABILITY)
+                arr.append(self.ability2vec(ability_oh) / len(pokemon.abilities))
+
+                # iv. type
+                type_oh = one_hot_encode(pokemon.types, N_TYPE)
+                arr.append(self.type2vec(type_oh))
+
+                # v. condition
+                status_oh = one_hot_encode([pokemon.status], N_STATUS)
+                arr.append(self.status2vec(status_oh))
+
+                # vi. hp and stats
+                arr.append(torch.Tensor([pokemon.hp] + pokemon.stats + pokemon.base_stats))
+            
+            # 3. Opponent info
+            # a. Dynamax info
+            arr.append(torch.Tensor([state.opp_used_dynamax, state.opp_remaining_dynamax]))
+
+            # b. Side attributes
+            side_attrib_oh = one_hot_encode(state.opp_side_attrib, N_SIDE_ATTRIB)
+            arr.append(self.sideattrib2vec(side_attrib_oh))
+
+            # c. Pokemon info
+            for pokemon in state.opp_pokemon:
+                # i. moves (Take average of move embeddings)
+                move_oh = one_hot_encode(pokemon.moves, N_MOVE)
+                arr.append(self.move2vec(move_oh) / len(pokemon.moves))
+                
+                # ii. items
+                item_oh = one_hot_encode(pokemon.items, N_ITEM)
+                arr.append(self.item2vec(item_oh) / len(pokemon.items))
+
+                # iii. abilities
+                ability_oh = one_hot_encode(pokemon.abilities, N_ABILITY)
+                arr.append(self.ability2vec(ability_oh) / len(pokemon.abilities))
+
+                # iv. type
+                type_oh = one_hot_encode(pokemon.types, N_TYPE)
+                arr.append(self.type2vec(type_oh))
+
+                # v. condition
+                status_oh = one_hot_encode([pokemon.status], N_STATUS)
+                arr.append(self.status2vec(status_oh))
+
+                # vi. hp and stats
+                arr.append(torch.Tensor([pokemon.hp] + pokemon.base_stats))
+            
+
+        # Combined input tensor
+        encoded = torch.stack([torch.cat(arr) for arr in encoded_subvectors], dim = 1)
+        
+        # Pad tensor to have 3 columns
+        if encoded.shape[1] < 3:
+            encoded = torch.cat([torch.zeros(FN_INPUT_DIM, 3 - encoded.shape[1]), encoded], dim = 1)
+
+        return encoded
     
     def __call__(self, fight_states):
-        return self.encoding()
+        return self.encoding(fight_states)
 
 
 class FightNet(nn.Module):
@@ -240,6 +279,7 @@ class FightNet(nn.Module):
 
 # Tests
 if __name__ == "__main__":
+    from random import randint, randrange, random
     from torchinfo import summary
 
     # Embedding test
@@ -260,3 +300,39 @@ if __name__ == "__main__":
     print("Swap probabilities:", test_fn.swap_prob()[0])
     print("Dynamax probability:", test_fn.dynamax_prob()[0])
     print("Win probability:", test_fn.win_prob()[0])
+    print()
+
+    # InputEncoder test
+    t1 = [
+        Pokemon(
+            [randrange(N_MOVE) for _ in range(4)],
+            [randrange(N_ITEM)],
+            [randrange(N_ABILITY)],
+            types = [randrange(N_TYPE) for _ in range(randint(1, 2))],
+            status = randrange(N_STATUS),
+            hp = random(),
+            stats = [random() for _ in range(5)],
+            base_stats = [random() for _ in range(5)]
+        )
+        for _ in range(6)
+    ]
+    t2 = [
+        Pokemon(
+            [randrange(N_MOVE) for _ in range(randint(4, 20))],
+            [randrange(N_ITEM) for _ in range(randint(1, 10))],
+            [randrange(N_ABILITY) for _ in range(randint(1, 10))],
+            types = [randrange(N_TYPE) for _ in range(randint(1, 2))],
+            status = randrange(N_STATUS),
+            hp = 6969,
+            base_stats = [random() for _ in range(5)]
+        )
+        for _ in range(6)
+    ]
+
+    s = [FightState(t1, t2)]
+    s[0].side_attrib.append(30)
+
+    test_ie = InputEncoder()
+    inpt = test_ie(s)
+    assert inpt.shape == x.shape[2:]
+    input_vector_summary(inpt[:, 2])
