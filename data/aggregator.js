@@ -27,3 +27,8 @@ for (let species of Object.values(data)) {
 fs.writeFileSync("moves.json", JSON.stringify(moves), "utf-8");
 fs.writeFileSync("items.json", JSON.stringify(items), "utf-8");
 fs.writeFileSync("abilities.json", JSON.stringify(abilities), "utf-8");
+
+console.log(`No. of Moves: ${moves.length}`);
+console.log(`No. of Items: ${items.length}`);
+console.log(`No. of Abilities: ${abilities.length}`);
+console.log("Written to moves.json, items.json, abilities.json")
