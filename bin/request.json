@@ -127,11 +127,11 @@
 							"used": true
 						},
 						{
-							"move": "Swords Dance",
-							"id": "swordsdance",
-							"pp": 32,
-							"maxpp": 32,
-							"target": "self",
+							"move": "Dual Wingbeat",
+							"id": "dualwingbeat",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
 							"disabled": false,
 							"disabledSource": "",
 							"used": false
@@ -406,9 +406,9 @@
 					"abilityState": {
 						"id": "rockhead"
 					},
-					"item": "lifeorb",
+					"item": "choiceband",
 					"itemState": {
-						"id": "lifeorb"
+						"id": "choiceband"
 					},
 					"lastItem": "",
 					"usedItemThisTurn": false,

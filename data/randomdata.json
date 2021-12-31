@@ -77,29 +77,6 @@
 			"White Herb"
 		]
 	},
-	"blastoisegmax": {
-		"randomBattleMoves": [
-			"icebeam",
-			"protect",
-			"rapidspin",
-			"scald",
-			"toxic"
-		],
-		"randomBattleLevel": 82,
-		"randomDoubleBattleMoves": [
-			"fakeout",
-			"flipturn",
-			"followme",
-			"icywind",
-			"lifedew",
-			"muddywater",
-			"protect"
-		],
-		"randomDoubleBattleLevel": 80,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)"
-	},
 	"butterfree": {
 		"randomBattleMoves": [
 			"energyball",
@@ -126,27 +103,132 @@
 			"Heavy-Duty Boots"
 		]
 	},
-	"butterfreegmax": {
-		"randomBattleMoves": [
-			"airslash",
-			"bugbuzz",
-			"quiverdance",
-			"sleeppowder"
-		],
-		"randomBattleLevel": 87,
-		"randomDoubleBattleMoves": [
-			"hurricane",
-			"pollenpuff",
-			"protect",
-			"quiverdance",
-			"sleeppowder"
-		],
-		"randomDoubleBattleLevel": 88,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)"
-	},
 	"pikachu": {
+		"randomBattleMoves": [
+			"irontail",
+			"knockoff",
+			"surf",
+			"voltswitch",
+			"volttackle"
+		],
+		"randomBattleLevel": 92,
+		"randomDoubleBattleMoves": [
+			"fakeout",
+			"grassknot",
+			"knockoff",
+			"protect",
+			"volttackle"
+		],
+		"randomDoubleBattleLevel": 91,
+		"tier": "NFE",
+		"abilities": [
+			"lightningrod"
+		],
+		"items": [
+			"Light Ball"
+		]
+	},
+	"pikachuunova": {
+		"randomBattleMoves": [
+			"irontail",
+			"knockoff",
+			"surf",
+			"voltswitch",
+			"volttackle"
+		],
+		"randomBattleLevel": 92,
+		"randomDoubleBattleMoves": [
+			"fakeout",
+			"grassknot",
+			"knockoff",
+			"protect",
+			"volttackle"
+		],
+		"randomDoubleBattleLevel": 91,
+		"tier": "NFE",
+		"abilities": [
+			"lightningrod"
+		],
+		"items": [
+			"Light Ball"
+		]
+	},
+	"pikachualola": {
+		"randomBattleMoves": [
+			"irontail",
+			"knockoff",
+			"surf",
+			"voltswitch",
+			"volttackle"
+		],
+		"randomBattleLevel": 92,
+		"randomDoubleBattleMoves": [
+			"fakeout",
+			"grassknot",
+			"knockoff",
+			"protect",
+			"volttackle"
+		],
+		"randomDoubleBattleLevel": 91,
+		"tier": "NFE",
+		"abilities": [
+			"lightningrod"
+		],
+		"items": [
+			"Light Ball"
+		]
+	},
+	"pikachuhoenn": {
+		"randomBattleMoves": [
+			"irontail",
+			"knockoff",
+			"surf",
+			"voltswitch",
+			"volttackle"
+		],
+		"randomBattleLevel": 92,
+		"randomDoubleBattleMoves": [
+			"fakeout",
+			"grassknot",
+			"knockoff",
+			"protect",
+			"volttackle"
+		],
+		"randomDoubleBattleLevel": 91,
+		"tier": "NFE",
+		"abilities": [
+			"lightningrod"
+		],
+		"items": [
+			"Light Ball"
+		]
+	},
+	"pikachusinnoh": {
+		"randomBattleMoves": [
+			"irontail",
+			"knockoff",
+			"surf",
+			"voltswitch",
+			"volttackle"
+		],
+		"randomBattleLevel": 92,
+		"randomDoubleBattleMoves": [
+			"fakeout",
+			"grassknot",
+			"knockoff",
+			"protect",
+			"volttackle"
+		],
+		"randomDoubleBattleLevel": 91,
+		"tier": "NFE",
+		"abilities": [
+			"lightningrod"
+		],
+		"items": [
+			"Light Ball"
+		]
+	},
+	"pikachukalos": {
 		"randomBattleMoves": [
 			"irontail",
 			"knockoff",
@@ -1205,7 +1287,7 @@
 			"White Herb"
 		]
 	},
-	"gengargmax": {
+	"gengar": {
 		"randomBattleMoves": [
 			"focusblast",
 			"nastyplot",
@@ -2171,7 +2253,7 @@
 			"Life Orb"
 		]
 	},
-	"laprasgmax": {
+	"lapras": {
 		"randomBattleMoves": [
 			"freezedry",
 			"icebeam",
@@ -2606,27 +2688,6 @@
 		"items": [
 			"Choice Band"
 		]
-	},
-	"snorlaxgmax": {
-		"randomBattleMoves": [
-			"bodyslam",
-			"curse",
-			"darkestlariat",
-			"earthquake",
-			"rest"
-		],
-		"randomBattleLevel": 82,
-		"randomDoubleBattleMoves": [
-			"bodyslam",
-			"curse",
-			"darkestlariat",
-			"highhorsepower",
-			"recycle"
-		],
-		"randomDoubleBattleLevel": 84,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)"
 	},
 	"articuno": {
 		"randomBattleMoves": [
@@ -6940,7 +7001,7 @@
 			"Heavy-Duty Boots"
 		]
 	},
-	"garbodorgmax": {
+	"garbodor": {
 		"randomBattleMoves": [
 			"explosion",
 			"gunkshot",
@@ -9581,7 +9642,7 @@
 			"Life Orb"
 		]
 	},
-	"wishiwashischool": {
+	"wishiwashi": {
 		"randomBattleMoves": [
 			"earthquake",
 			"hydropump",
@@ -11404,19 +11465,6 @@
 			"Choice Band"
 		]
 	},
-	"rillaboomgmax": {
-		"randomBattleMoves": [
-			"acrobatics",
-			"grassyglide",
-			"highhorsepower",
-			"knockoff",
-			"swordsdance"
-		],
-		"randomBattleLevel": 78,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)"
-	},
 	"cinderace": {
 		"randomBattleMoves": [
 			"courtchange",
@@ -11447,18 +11495,6 @@
 			"Heavy-Duty Boots"
 		]
 	},
-	"cinderacegmax": {
-		"randomBattleLevel": 74,
-		"randomBattleMoves": [
-			"bulkup",
-			"pyroball",
-			"highjumpkick",
-			"suckerpunch"
-		],
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)"
-	},
 	"inteleon": {
 		"randomBattleMoves": [
 			"airslash",
@@ -11486,25 +11522,6 @@
 		"items": [
 			"Choice Specs"
 		]
-	},
-	"inteleongmax": {
-		"randomBattleMoves": [
-			"airslash",
-			"focusenergy",
-			"icebeam",
-			"surf"
-		],
-		"randomBattleLevel": 80,
-		"randomDoubleBattleMoves": [
-			"focusenergy",
-			"hydropump",
-			"icebeam",
-			"muddywater"
-		],
-		"randomDoubleBattleLevel": 84,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)"
 	},
 	"greedent": {
 		"randomBattleMoves": [
@@ -11735,7 +11752,7 @@
 			"Life Orb"
 		]
 	},
-	"coalossalgmax": {
+	"coalossal": {
 		"randomBattleMoves": [
 			"overheat",
 			"rapidspin",
@@ -11811,24 +11828,6 @@
 		"randomDoubleBattleLevel": 90,
 		"tier": "(PU)",
 		"doublesTier": "(DUU)",
-		"abilities": [
-			"thickfat"
-		],
-		"items": [
-			"Leftovers"
-		]
-	},
-	"appletungmax": {
-		"randomBattleMoves": [
-			"appleacid",
-			"dracometeor",
-			"leechseed",
-			"recover"
-		],
-		"randomBattleLevel": 90,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)",
 		"abilities": [
 			"thickfat"
 		],
@@ -12030,7 +12029,7 @@
 			"White Herb"
 		]
 	},
-	"hatterenegmax": {
+	"hatterene": {
 		"randomBattleMoves": [
 			"calmmind",
 			"dazzlinggleam",
@@ -12079,39 +12078,7 @@
 			"Light Clay"
 		]
 	},
-	"grimmsnarlgmax": {
-		"randomBattleMoves": [
-			"bulkup",
-			"darkestlariat",
-			"playrough",
-			"rest",
-			"suckerpunch",
-			"trick"
-		],
-		"randomBattleLevel": 82,
-		"randomDoubleBattleMoves": [
-			"darkestlariat",
-			"fakeout",
-			"lightscreen",
-			"reflect",
-			"spiritbreak",
-			"taunt",
-			"thunderwave"
-		],
-		"randomDoubleBattleLevel": 84,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)",
-		"abilities": [
-			"prankster"
-		],
-		"items": [
-			"Chesto Berry",
-			"Choice Band",
-			"Life Orb"
-		]
-	},
-	"alcremiegmax": {
+	"alcremie": {
 		"randomBattleMoves": [
 			"calmmind",
 			"dazzlinggleam",
@@ -12388,25 +12355,6 @@
 		],
 		"items": [
 			"Life Orb"
-		]
-	},
-	"copperajahgmax": {
-		"randomBattleMoves": [
-			"earthquake",
-			"heatcrash",
-			"heavyslam",
-			"powerwhip",
-			"stoneedge"
-		],
-		"randomBattleLevel": 84,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)",
-		"abilities": [
-			"heavymetal"
-		],
-		"items": [
-			"Choice Band"
 		]
 	},
 	"dracozolt": {
@@ -12769,45 +12717,6 @@
 		],
 		"items": [
 			"Leftovers"
-		]
-	},
-	"urshifugmax": {
-		"randomBattleMoves": [
-			"bulkup",
-			"drainpunch",
-			"substitute",
-			"wickedblow"
-		],
-		"randomBattleLevel": 76,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)",
-		"abilities": [
-			"unseenfist"
-		],
-		"items": [
-			"Leftovers"
-		]
-	},
-	"urshifurapidstrikegmax": {
-		"randomBattleMoves": [
-			"bulkup",
-			"closecombat",
-			"surgingstrikes",
-			"icepunch",
-			"uturn"
-		],
-		"randomBattleLevel": 78,
-		"isNonstandard": "Gigantamax",
-		"tier": "AG",
-		"doublesTier": "(DUber)",
-		"abilities": [
-			"unseenfist"
-		],
-		"items": [
-			"Choice Band",
-			"Choice Scarf",
-			"Life Orb"
 		]
 	},
 	"zarude": {
