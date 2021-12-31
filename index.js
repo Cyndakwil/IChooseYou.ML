@@ -6,6 +6,14 @@ const { randomInt } = require('crypto');
 const https = require('https');
 const smogon_api = 'https://smogon-usage-stats.herokuapp.com/2019/12/gen8randombattle/1630/';
 
+
+function move(p, s) {
+    // call model here
+
+    s.write(`>p` + p + ` move 1`);
+}
+
+
 const dex = JSON.parse(fs.readFileSync('./bin/pokedex.json'));
 const genericInfo = JSON.parse(fs.readFileSync('./data/randomdata.json'));
 
@@ -14,6 +22,8 @@ stream = new Sim.BattleStream();
 // Get live state of game
 (async () => {
     for await (var output of stream) {
+        // console.log(output)
+
         let msg = output.split("|");
 
         if (msg.includes("turn")) {
@@ -50,6 +60,8 @@ stream = new Sim.BattleStream();
 
             // Write data to request file for model use
             fs.writeFileSync("./bin/request.json", JSON.stringify(data, null, "\t"));
+            move("1", stream);
+            move("2", stream);
         }
     }
 })();
