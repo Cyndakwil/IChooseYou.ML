@@ -1,14 +1,13 @@
-# TODO Enums/tables for IDs
+import json
 
-# TODO get avg stats for placeholder unknown pokemon
 class Pokemon:
     """ Struct to store pokemon info
     """
-    def __init__(self, moves, items, abilities, types = [],
-                 status = 0, hp = 1, stats = [0, 0, 0, 0, 0], base_stats = [0, 0, 0, 0, 0]):
+    def __init__(self, moves = [0, 0, 0, 0], items = [0], abilities = [0], types = [],
+                 status = 0, hp = 1, base_stats = [199.88, 188.12, 188.12, 188.12, 179.72],
+                 boosts = [0, 0, 0, 0, 0]):
         """ Constructor
-            For unknown pokemon, leave the unknown kwargs blank.
-                                 moves, item, ability must be provided tho
+            For unknown values, leave the unknown kwargs blank for default values.
 
         args:
         moves   --  List of move IDs.
@@ -19,8 +18,8 @@ class Pokemon:
         types   -- List of type IDs
         status  -- status ID
         hp      -- Float ranging from [0, 1]
-        stats   -- List of floats ranging from [0, 1]
-        base_stats -- List of floats ranging from [0, 1]
+        base_stats -- List of floats ranging from [0, 1] (ordered [atk, def, spa, spd, spe])
+        boosts  -- List of floats ranging from [-6, 6] (ordered [atk, def, spa, spd, spe])
         """
         self.moves = moves
         self.items = items
@@ -28,12 +27,8 @@ class Pokemon:
         self.types = types
         self.status = status
         self.hp = hp
-        self.stats = stats
         self.base_stats = base_stats
-    
-    def from_json(self, json_dict):
-        # TODO implement if pokemon are written as json
-        pass
+        self.boosts = boosts
 
 
 class FightState:
@@ -59,4 +54,9 @@ class FightState:
         self.opp_side_attrib = []       # List of side attribute IDs
         self.opp_pokemon = opp_pokemon # Array of pokemon objects
                                                          # (LEADING POKEMON AT IDX 0 and DO NOT CHANGE SIZE)
-        
+    def from_json(self, path):
+        """ Initializes a FightState object from a request.json file
+        """
+        with open(path, "r") as rf:
+            state_data = json.load(rf)
+        # TODO complete from_json()

@@ -3,13 +3,13 @@ MODEL HYPERPARAMETERS
 """
 
 # Embedding models
-N_MOVE = 297
+N_MOVE = 298
 MOVE_VEC_DIM = 50
 
-N_ITEM = 61
+N_ITEM = 62
 ITEM_VEC_DIM = 50
 
-N_ABILITY = 182
+N_ABILITY = 183
 ABILITY_VEC_DIM = 50
 
 N_SIDE_ATTRIB = 100
@@ -46,5 +46,5 @@ FN_INPUT_DIM =  FIELD_ATTRIB_VEC_DIM + \
                     ABILITY_VEC_DIM + \
                     TYPE_VEC_DIM + \
                     STATUS_VEC_DIM + \
-                    1 + 5
+                    1 + 5 + 5
                 )

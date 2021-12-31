@@ -47,9 +47,9 @@ def input_vector_summary(v):
         i += STATUS_VEC_DIM
         print(f"HP%: {v[i]}")
         i += 1
-        print(f"STATS: {v[i : i + 5]}")
-        i += 5
         print(f"BASE STATS: {v[i : i + 5]}")
+        i += 5
+        print(f"BOOSTS: {v[i : i + 5]}")
         i += 5
     print()
     
@@ -78,4 +78,6 @@ def input_vector_summary(v):
         print(f"HP%: {v[i]}")
         i += 1
         print(f"BASE STATS: {v[i : i + 5]}")
+        i += 5
+        print(f"BOOSTS: {v[i : i + 5]}")
         i += 5

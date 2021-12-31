@@ -108,8 +108,9 @@ class InputEncoder(nn.Module):
                 status_oh = one_hot_encode([pokemon.status], N_STATUS)
                 arr.append(self.status2vec(status_oh))
 
-                # vi. hp and stats
-                arr.append(torch.Tensor([pokemon.hp] + pokemon.stats + pokemon.base_stats))
+                # vi. hp and stats and boosts
+                arr.append(torch.Tensor([pokemon.hp] + pokemon.base_stats))
+                arr.append(torch.Tensor(pokemon.boosts)/6)
             
             # 3. Opponent info
             # a. Dynamax info
@@ -143,6 +144,7 @@ class InputEncoder(nn.Module):
 
                 # vi. hp and stats
                 arr.append(torch.Tensor([pokemon.hp] + pokemon.base_stats))
+                arr.append(torch.Tensor(pokemon.boosts)/6)
             
 
         # Combined input tensor
@@ -311,8 +313,8 @@ if __name__ == "__main__":
             types = [randrange(N_TYPE) for _ in range(randint(1, 2))],
             status = randrange(N_STATUS),
             hp = random(),
-            stats = [random() for _ in range(5)],
-            base_stats = [random() for _ in range(5)]
+            base_stats = [random() for _ in range(5)],
+            boosts = [randint(-6, 6) for _ in range(5)]
         )
         for _ in range(6)
     ]
@@ -324,7 +326,8 @@ if __name__ == "__main__":
             types = [randrange(N_TYPE) for _ in range(randint(1, 2))],
             status = randrange(N_STATUS),
             hp = 6969,
-            base_stats = [random() for _ in range(5)]
+            base_stats = [random() for _ in range(5)],
+            boosts = [randint(-6, 6) for _ in range(5)]
         )
         for _ in range(6)
     ]

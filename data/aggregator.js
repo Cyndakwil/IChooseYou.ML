@@ -6,9 +6,9 @@
 const data = require("./randomdata.json");
 const fs = require("fs");
 
-moves = []
-items = []
-abilities = []
+moves = ["unk"]
+items = ["unk"]
+abilities = ["unk"]
 
 for (let species of Object.values(data)) {
     for (move of species.randomBattleMoves) {

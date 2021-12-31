@@ -35,6 +35,7 @@ stream = new Sim.BattleStream();
                     }
                 });
 
+                // TODO only include known pokemon
                 // Set opposing pokemon data
                 other.pokemon.forEach(mon => {
                     side.opponent[mon.speciesState.id] = {};
@@ -58,3 +59,5 @@ stream = new Sim.BattleStream();
 stream.write(`>start {"formatid":"gen8randombattle"}`);
 stream.write(`>player p1 {"name":"Cock"}`);
 stream.write(`>player p2 {"name":"Balls"}`);
+stream.write(`>p1 default`);
+stream.write(`>p2 move 1 max`);

@@ -1,0 +1,22 @@
+{
+    "raindance": 0,
+    "primordialsea": 1,
+    "sunnyday": 2,
+    "desolateland": 3,
+    "sandstorm": 4,
+    "hail": 5,
+    "deltastream": 6,
+    "echoedvoice": 7,
+    "fairylock": 8,
+    "gravity": 9,
+    "iondeluge": 10,
+    "magicroom": 11,
+    "mudsport": 12,
+    "trickroom": 13,
+    "watersport": 14,
+    "wonderroom": 15,
+    "electricterrain": 16,
+    "grassyterrain": 17,
+    "mistyterrain": 18,
+    "psychicterrain": 19
+}
