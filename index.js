@@ -6,11 +6,13 @@ const { randomInt } = require('crypto');
 const https = require('https');
 const smogon_api = 'https://smogon-usage-stats.herokuapp.com/2019/12/gen8randombattle/1630/';
 
+const num_games = 32;
+
 // Game instance used to run concurrent games for training
 class Game {
     constructor(id1, id2) {
         this.stream = new Sim.BattleStream();
-        this.process = spawn('python', [''])
+        // this.process = spawn('python', ['']);
 
         // UID of both models
         this.p1 = id1;
@@ -24,12 +26,10 @@ class Game {
     }
 }
 
-
-
 const dex = JSON.parse(fs.readFileSync('./data/pokedex.json'));
 const genericInfo = JSON.parse(fs.readFileSync('./data/randomdata.json'));
 
-game = new Game();
+let game = new Game(1, 2);
 
 // Get live state of game
 (async () => {
@@ -61,18 +61,21 @@ game = new Game();
                 // Set opposing pokemon data
                 side.opponent.volatiles = [];
                 side.opponent.sideConditions = other.sideConditions;
+                side.opponent.dynamaxUsed = other.dynamaxUsed;
+                side.opponent.pokemon = {};
                 other.pokemon.forEach(mon => {
                     for (let i=0; i < Object.keys(mon.volatiles).length; i++) {
                         side.opponent.volatiles.push(mon.volatiles[Object.keys(mon.volatiles)[i]]);
                     }
-                    side.opponent[mon.speciesState.id] = {};
-                    side.opponent[mon.speciesState.id].name = mon.speciesState.id;
-                    side.opponent[mon.speciesState.id].types = mon.types;
-                    side.opponent[mon.speciesState.id].percenthp = 1.0 * mon.hp / mon.maxhp;
-                    side.opponent[mon.speciesState.id].baseStats = dex[mon.speciesState.id].baseStats;
-                    side.opponent[mon.speciesState.id].moves = genericInfo[mon.speciesState.id].randomBattleMoves;
-                    side.opponent[mon.speciesState.id].items = genericInfo[mon.speciesState.id].items;
-                    side.opponent[mon.speciesState.id].abilities = genericInfo[mon.speciesState.id].abilities;
+                    side.opponent.pokemon[mon.speciesState.id] = {};
+                    side.opponent.pokemon[mon.speciesState.id].name = mon.speciesState.id;
+                    side.opponent.pokemon[mon.speciesState.id].types = mon.types;
+                    side.opponent.pokemon[mon.speciesState.id].percenthp = 1.0 * mon.hp / mon.maxhp;
+                    side.opponent.pokemon[mon.speciesState.id].baseStats = dex[mon.speciesState.id].baseStats;
+                    side.opponent.pokemon[mon.speciesState.id].abilities = mon.boosts;
+                    side.opponent.pokemon[mon.speciesState.id].moves = genericInfo[mon.speciesState.id].randomBattleMoves;
+                    side.opponent.pokemon[mon.speciesState.id].items = genericInfo[mon.speciesState.id].items;
+                    side.opponent.pokemon[mon.speciesState.id].abilities = genericInfo[mon.speciesState.id].abilities;
                 });
             });
 
