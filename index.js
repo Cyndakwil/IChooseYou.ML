@@ -6,28 +6,40 @@ const { randomInt } = require('crypto');
 const https = require('https');
 const smogon_api = 'https://smogon-usage-stats.herokuapp.com/2019/12/gen8randombattle/1630/';
 
+// Game instance used to run concurrent games for training
+class Game {
+    constructor(id1, id2) {
+        this.stream = new Sim.BattleStream();
+        this.process = spawn('python', [''])
 
-function move(p, s) {
-    // call model here
+        // UID of both models
+        this.p1 = id1;
+        this.p2 = id2;
+    }
 
-    s.write(`>p` + p + ` move 1`);
+    move(p) {
+        // call model here
+    
+        // s.write(`>p` + p + ` move 1`); // model choice
+    }
 }
 
 
-const dex = JSON.parse(fs.readFileSync('./bin/pokedex.json'));
+
+const dex = JSON.parse(fs.readFileSync('./data/pokedex.json'));
 const genericInfo = JSON.parse(fs.readFileSync('./data/randomdata.json'));
 
-stream = new Sim.BattleStream();
+game = new Game();
 
 // Get live state of game
 (async () => {
-    for await (var output of stream) {
+    for await (var output of game.stream) {
         // console.log(output)
 
         let msg = output.split("|");
 
         if (msg.includes("turn")) {
-            let data = stream.battle.toJSON();
+            let data = game.stream.battle.toJSON();
 
             // Adding data for each side
             data.sides.forEach(side => {         
@@ -47,7 +59,12 @@ stream = new Sim.BattleStream();
 
                 // TODO only include known pokemon
                 // Set opposing pokemon data
+                side.opponent.volatiles = [];
+                side.opponent.sideConditions = other.sideConditions;
                 other.pokemon.forEach(mon => {
+                    for (let i=0; i < Object.keys(mon.volatiles).length; i++) {
+                        side.opponent.volatiles.push(mon.volatiles[Object.keys(mon.volatiles)[i]]);
+                    }
                     side.opponent[mon.speciesState.id] = {};
                     side.opponent[mon.speciesState.id].name = mon.speciesState.id;
                     side.opponent[mon.speciesState.id].types = mon.types;
@@ -60,16 +77,16 @@ stream = new Sim.BattleStream();
             });
 
             // Write data to request file for model use
-            fs.writeFileSync("./bin/request.json", JSON.stringify(data, null, "\t"));
-            move("1", stream);
-            move("2", stream);
+            fs.writeFileSync("./data/samplerequest.json", JSON.stringify(data, null, "\t"));
+
+            // CALL MOVES HERE
         }
     }
 })();
 
 // TESTING
-stream.write(`>start {"formatid":"gen8randombattle"}`);
-stream.write(`>player p1 {"name":"Cock"}`);
-stream.write(`>player p2 {"name":"Balls"}`);
-stream.write(`>p1 default`);
-stream.write(`>p2 move 1 max`);
+game.stream.write(`>start {"formatid":"gen8randombattle"}`);
+game.stream.write(`>player p1 {"name":"Cock"}`);
+game.stream.write(`>player p2 {"name":"Balls"}`);
+game.stream.write(`>p1 default`);
+game.stream.write(`>p2 move 1 max`);
