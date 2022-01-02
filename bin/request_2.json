@@ -1,0 +1,2718 @@
+{
+	"debugMode": false,
+	"strictChoices": false,
+	"formatData": {
+		"id": "gen8randombattle"
+	},
+	"gameType": "singles",
+	"activePerHalf": 1,
+	"prngSeed": [
+		23328,
+		37312,
+		19816,
+		4310
+	],
+	"rated": false,
+	"reportExactHP": false,
+	"reportPercentages": true,
+	"supportCancel": true,
+	"faintQueue": [],
+	"inputLog": [
+		">start {\"formatid\":\"gen8randombattle\",\"seed\":[23328,37312,19816,4310]}",
+		">player p1 {\"name\":\"Cock\",\"seed\":[24555,8826,22320,35007]}",
+		">player p2 {\"name\":\"Balls\",\"seed\":[10076,15805,37383,15904]}",
+		">p1 move stealthrock",
+		">p2 move roost"
+	],
+	"messageLog": [],
+	"sentLogPos": 30,
+	"sentEnd": false,
+	"requestState": "move",
+	"turn": 2,
+	"midTurn": false,
+	"started": true,
+	"ended": false,
+	"effect": {
+		"id": ""
+	},
+	"effectState": {
+		"id": ""
+	},
+	"event": {
+		"id": ""
+	},
+	"events": null,
+	"eventDepth": 0,
+	"activeMove": null,
+	"activePokemon": null,
+	"activeTarget": null,
+	"lastMove": {
+		"hit": 1,
+		"totalDamage": 0,
+		"move": "[Move:roost]"
+	},
+	"lastMoveLine": 25,
+	"lastSuccessfulMoveThisTurn": null,
+	"lastDamage": 0,
+	"abilityOrder": 2,
+	"quickClawRoll": false,
+	"field": {
+		"weather": "",
+		"weatherState": {
+			"id": ""
+		},
+		"terrain": "",
+		"terrainState": {
+			"id": ""
+		},
+		"pseudoWeather": {
+			"sleepclausemod": {
+				"id": "sleepclausemod",
+				"source": null
+			}
+		}
+	},
+	"sides": [
+		{
+			"foe": "[Side:p2]",
+			"allySide": null,
+			"lastSelectedMove": "stealthrock",
+			"id": "p1",
+			"n": 0,
+			"name": "Cock",
+			"avatar": "",
+			"active": [
+				"[Pokemon:p1a]"
+			],
+			"pokemonLeft": 6,
+			"faintedLastTurn": null,
+			"faintedThisTurn": null,
+			"zMoveUsed": false,
+			"dynamaxUsed": false,
+			"sideConditions": {},
+			"slotConditions": [
+				{}
+			],
+			"lastMove": null,
+			"pokemon": [
+				{
+					"m": {},
+					"baseSpecies": "[Species:nidoqueen]",
+					"species": "[Species:nidoqueen]",
+					"speciesState": {
+						"id": "nidoqueen"
+					},
+					"gender": "F",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Stealth Rock",
+							"id": "stealthrock",
+							"pp": 31,
+							"maxpp": 32,
+							"target": "foeSide",
+							"disabled": false,
+							"disabledSource": "",
+							"used": true
+						},
+						{
+							"move": "Ice Beam",
+							"id": "icebeam",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Earth Power",
+							"id": "earthpower",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Sludge Wave",
+							"id": "sludgewave",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacent",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 0,
+					"details": "Nidoqueen, L84, F",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 159,
+						"def": 194,
+						"spa": 174,
+						"spd": 191,
+						"spe": 176,
+						"hp": 288
+					},
+					"storedStats": {
+						"atk": 159,
+						"def": 194,
+						"spa": 174,
+						"spd": 191,
+						"spe": 176
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "sheerforce",
+					"ability": "sheerforce",
+					"abilityState": {
+						"id": "sheerforce",
+						"target": "[Pokemon:p1a]"
+					},
+					"item": "lifeorb",
+					"itemState": {
+						"id": "lifeorb",
+						"target": "[Pokemon:p1a]"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Poison",
+						"Ground"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Poison/Ground",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": false,
+					"beingCalledBack": false,
+					"lastMove": {
+						"hit": 0,
+						"move": "[Move:stealthrock]"
+					},
+					"lastMoveUsed": {
+						"hit": 0,
+						"move": "[Move:stealthrock]"
+					},
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": true,
+					"activeTurns": 2,
+					"activeMoveActions": 1,
+					"previouslySwitchedIn": 1,
+					"truantTurn": false,
+					"isStarted": true,
+					"duringMove": false,
+					"weighthg": 600,
+					"speed": 176,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 288,
+					"baseMaxhp": 288,
+					"hp": 288,
+					"moveLastTurnResult": true,
+					"lastMoveTargetLoc": 1,
+					"set": {
+						"name": "Nidoqueen",
+						"species": "Nidoqueen",
+						"gender": "F",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 84,
+						"moves": [
+							"stealthrock",
+							"icebeam",
+							"earthpower",
+							"sludgewave"
+						],
+						"ability": "Sheer Force",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Life Orb"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:reuniclus]",
+					"species": "[Species:reuniclus]",
+					"speciesState": {
+						"id": "reuniclus"
+					},
+					"gender": "M",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Shadow Ball",
+							"id": "shadowball",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Focus Blast",
+							"id": "focusblast",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Calm Mind",
+							"id": "calmmind",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Psychic",
+							"id": "psychic",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 1,
+					"details": "Reuniclus, L84, M",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 114,
+						"def": 174,
+						"spa": 258,
+						"spd": 191,
+						"spe": 99,
+						"hp": 322
+					},
+					"storedStats": {
+						"atk": 114,
+						"def": 174,
+						"spa": 258,
+						"spd": 191,
+						"spe": 99
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "magicguard",
+					"ability": "magicguard",
+					"abilityState": {
+						"id": "magicguard"
+					},
+					"item": "lifeorb",
+					"itemState": {
+						"id": "lifeorb"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Psychic"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Psychic",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 201,
+					"speed": 99,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 322,
+					"baseMaxhp": 322,
+					"hp": 322,
+					"set": {
+						"name": "Reuniclus",
+						"species": "Reuniclus",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 84,
+						"moves": [
+							"shadowball",
+							"focusblast",
+							"calmmind",
+							"psychic"
+						],
+						"ability": "Magic Guard",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Life Orb"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:cursola]",
+					"species": "[Species:cursola]",
+					"speciesState": {
+						"id": "cursola"
+					},
+					"gender": "M",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Earth Power",
+							"id": "earthpower",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Shadow Ball",
+							"id": "shadowball",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Ice Beam",
+							"id": "icebeam",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Strength Sap",
+							"id": "strengthsap",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 2,
+					"details": "Cursola, L86, M",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 168,
+						"def": 135,
+						"spa": 299,
+						"spd": 273,
+						"spe": 101,
+						"hp": 243
+					},
+					"storedStats": {
+						"atk": 168,
+						"def": 135,
+						"spa": 299,
+						"spd": 273,
+						"spe": 101
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "perishbody",
+					"ability": "perishbody",
+					"abilityState": {
+						"id": "perishbody"
+					},
+					"item": "leftovers",
+					"itemState": {
+						"id": "leftovers"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Ghost"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Ghost",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 4,
+					"speed": 101,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 243,
+					"baseMaxhp": 243,
+					"hp": 243,
+					"set": {
+						"name": "Cursola",
+						"species": "Cursola",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 86,
+						"moves": [
+							"earthpower",
+							"shadowball",
+							"icebeam",
+							"strengthsap"
+						],
+						"ability": "Perish Body",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:mrmime]",
+					"species": "[Species:mrmime]",
+					"speciesState": {
+						"id": "mrmime"
+					},
+					"gender": "F",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Dazzling Gleam",
+							"id": "dazzlinggleam",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacentFoes",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Healing Wish",
+							"id": "healingwish",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Psychic",
+							"id": "psychic",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Focus Blast",
+							"id": "focusblast",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 3,
+					"details": "Mr. Mime, L86, F",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 82,
+						"def": 161,
+						"spa": 221,
+						"spd": 256,
+						"spe": 204,
+						"hp": 209
+					},
+					"storedStats": {
+						"atk": 82,
+						"def": 161,
+						"spa": 221,
+						"spd": 256,
+						"spe": 204
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "filter",
+					"ability": "filter",
+					"abilityState": {
+						"id": "filter"
+					},
+					"item": "choicescarf",
+					"itemState": {
+						"id": "choicescarf"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Psychic",
+						"Fairy"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Psychic/Fairy",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 545,
+					"speed": 204,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 209,
+					"baseMaxhp": 209,
+					"hp": 209,
+					"set": {
+						"name": "Mr. Mime",
+						"species": "Mr. Mime",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 86,
+						"moves": [
+							"dazzlinggleam",
+							"healingwish",
+							"psychic",
+							"focusblast"
+						],
+						"ability": "Filter",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Choice Scarf"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:diancie]",
+					"species": "[Species:diancie]",
+					"speciesState": {
+						"id": "diancie"
+					},
+					"gender": "",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Diamond Storm",
+							"id": "diamondstorm",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "allAdjacentFoes",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Body Press",
+							"id": "bodypress",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Toxic",
+							"id": "toxic",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Moonblast",
+							"id": "moonblast",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 4,
+					"details": "Diancie, L82",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 211,
+						"def": 293,
+						"spa": 211,
+						"spd": 293,
+						"spe": 129,
+						"hp": 216
+					},
+					"storedStats": {
+						"atk": 211,
+						"def": 293,
+						"spa": 211,
+						"spd": 293,
+						"spe": 129
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "clearbody",
+					"ability": "clearbody",
+					"abilityState": {
+						"id": "clearbody"
+					},
+					"item": "leftovers",
+					"itemState": {
+						"id": "leftovers"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Rock",
+						"Fairy"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Rock/Fairy",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 88,
+					"speed": 129,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 216,
+					"baseMaxhp": 216,
+					"hp": 216,
+					"set": {
+						"name": "Diancie",
+						"species": "Diancie",
+						"gender": "N",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 82,
+						"moves": [
+							"diamondstorm",
+							"bodypress",
+							"toxic",
+							"moonblast"
+						],
+						"ability": "Clear Body",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:durant]",
+					"species": "[Species:durant]",
+					"speciesState": {
+						"id": "durant"
+					},
+					"gender": "F",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Hone Claws",
+							"id": "honeclaws",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Iron Head",
+							"id": "ironhead",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Superpower",
+							"id": "superpower",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Rock Slide",
+							"id": "rockslide",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacentFoes",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 5,
+					"details": "Durant, L78, F",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 215,
+						"def": 220,
+						"spa": 120,
+						"spd": 120,
+						"spe": 215,
+						"hp": 219
+					},
+					"storedStats": {
+						"atk": 215,
+						"def": 220,
+						"spa": 120,
+						"spd": 120,
+						"spe": 215
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "hustle",
+					"ability": "hustle",
+					"abilityState": {
+						"id": "hustle"
+					},
+					"item": "lifeorb",
+					"itemState": {
+						"id": "lifeorb"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Bug",
+						"Steel"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Bug/Steel",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 330,
+					"speed": 215,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 219,
+					"baseMaxhp": 219,
+					"hp": 219,
+					"set": {
+						"name": "Durant",
+						"species": "Durant",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 78,
+						"moves": [
+							"honeclaws",
+							"ironhead",
+							"superpower",
+							"rockslide"
+						],
+						"ability": "Hustle",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Life Orb"
+					},
+					"percenthp": 1
+				}
+			],
+			"team": "123456",
+			"choice": {
+				"cantUndo": false,
+				"error": "",
+				"actions": [],
+				"forcedSwitchesLeft": 0,
+				"forcedPassesLeft": 0,
+				"zMove": false,
+				"mega": false,
+				"ultra": false,
+				"dynamax": false,
+				"switchIns": []
+			},
+			"volatiles": [],
+			"opponent": {
+				"volatiles": [],
+				"sideConditions": {
+					"stealthrock": {
+						"id": "stealthrock",
+						"target": "[Side:p2]",
+						"source": "[Pokemon:p1a]",
+						"sourceSlot": "p1a"
+					}
+				},
+				"dynamaxUsed": false,
+				"pokemon": {
+					"skarmory": {
+						"name": "skarmory",
+						"types": [
+							"Steel",
+							"Flying"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 65,
+							"attack": 80,
+							"defense": 140,
+							"special-attack": 40,
+							"special-defense": 70,
+							"speed": 70
+						},
+						"abilities": [
+							"sturdy"
+						],
+						"moves": [
+							"bodypress",
+							"bravebird",
+							"roost",
+							"spikes",
+							"stealthrock",
+							"whirlwind"
+						],
+						"items": [
+							"Leftovers"
+						]
+					},
+					"dusknoir": {
+						"name": "dusknoir",
+						"types": [
+							"Ghost"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 45,
+							"attack": 100,
+							"defense": 135,
+							"special-attack": 65,
+							"special-defense": 135,
+							"speed": 45
+						},
+						"abilities": [
+							"frisk",
+							"pressure"
+						],
+						"moves": [
+							"earthquake",
+							"icepunch",
+							"painsplit",
+							"poltergeist",
+							"shadowsneak",
+							"trick",
+							"willowisp"
+						],
+						"items": [
+							"Choice Band",
+							"Leftovers"
+						]
+					},
+					"delibird": {
+						"name": "delibird",
+						"types": [
+							"Ice",
+							"Flying"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 45,
+							"attack": 55,
+							"defense": 45,
+							"special-attack": 65,
+							"special-defense": 45,
+							"speed": 75
+						},
+						"abilities": [
+							"vitalspirit"
+						],
+						"moves": [
+							"freezedry",
+							"memento",
+							"rapidspin",
+							"spikes"
+						],
+						"items": [
+							"Heavy-Duty Boots"
+						]
+					},
+					"dhelmise": {
+						"name": "dhelmise",
+						"types": [
+							"Ghost",
+							"Grass"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 70,
+							"attack": 131,
+							"defense": 100,
+							"special-attack": 86,
+							"special-defense": 90,
+							"speed": 40
+						},
+						"abilities": [
+							"steelworker"
+						],
+						"moves": [
+							"anchorshot",
+							"earthquake",
+							"poltergeist",
+							"powerwhip",
+							"rapidspin",
+							"swordsdance"
+						],
+						"items": [
+							"Assault Vest",
+							"Choice Band",
+							"Lum Berry"
+						]
+					},
+					"heliolisk": {
+						"name": "heliolisk",
+						"types": [
+							"Electric",
+							"Normal"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 62,
+							"attack": 55,
+							"defense": 52,
+							"special-attack": 109,
+							"special-defense": 94,
+							"speed": 109
+						},
+						"abilities": [
+							"dryskin"
+						],
+						"moves": [
+							"glare",
+							"grassknot",
+							"hypervoice",
+							"surf",
+							"thunderbolt",
+							"voltswitch"
+						],
+						"items": [
+							"Choice Specs",
+							"Focus Sash",
+							"Life Orb"
+						]
+					},
+					"porygonz": {
+						"name": "porygonz",
+						"types": [
+							"Normal"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 85,
+							"attack": 80,
+							"defense": 70,
+							"special-attack": 135,
+							"special-defense": 75,
+							"speed": 90
+						},
+						"abilities": [
+							"adaptability",
+							"download"
+						],
+						"moves": [
+							"darkpulse",
+							"icebeam",
+							"nastyplot",
+							"thunderbolt",
+							"triattack",
+							"trick"
+						],
+						"items": [
+							"Choice Scarf",
+							"Choice Specs",
+							"Life Orb"
+						]
+					}
+				}
+			}
+		},
+		{
+			"foe": "[Side:p1]",
+			"allySide": null,
+			"lastSelectedMove": "roost",
+			"id": "p2",
+			"n": 1,
+			"name": "Balls",
+			"avatar": "",
+			"active": [
+				"[Pokemon:p2a]"
+			],
+			"pokemonLeft": 6,
+			"faintedLastTurn": null,
+			"faintedThisTurn": null,
+			"zMoveUsed": false,
+			"dynamaxUsed": false,
+			"sideConditions": {
+				"stealthrock": {
+					"id": "stealthrock",
+					"target": "[Side:p2]",
+					"source": "[Pokemon:p1a]",
+					"sourceSlot": "p1a"
+				}
+			},
+			"slotConditions": [
+				{}
+			],
+			"lastMove": null,
+			"pokemon": [
+				{
+					"m": {},
+					"baseSpecies": "[Species:skarmory]",
+					"species": "[Species:skarmory]",
+					"speciesState": {
+						"id": "skarmory"
+					},
+					"gender": "F",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Roost",
+							"id": "roost",
+							"pp": 15,
+							"maxpp": 16,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": true
+						},
+						{
+							"move": "Brave Bird",
+							"id": "bravebird",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "any",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Body Press",
+							"id": "bodypress",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Stealth Rock",
+							"id": "stealthrock",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "foeSide",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 0,
+					"details": "Skarmory, L80, F",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 174,
+						"def": 270,
+						"spa": 110,
+						"spd": 158,
+						"spe": 158,
+						"hp": 235
+					},
+					"storedStats": {
+						"atk": 174,
+						"def": 270,
+						"spa": 110,
+						"spd": 158,
+						"spe": 158
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "sturdy",
+					"ability": "sturdy",
+					"abilityState": {
+						"id": "sturdy",
+						"target": "[Pokemon:p2a]"
+					},
+					"item": "leftovers",
+					"itemState": {
+						"id": "leftovers"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Steel",
+						"Flying"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Steel/Flying",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": false,
+					"beingCalledBack": false,
+					"lastMove": {
+						"hit": 1,
+						"totalDamage": 0,
+						"move": "[Move:roost]"
+					},
+					"lastMoveUsed": {
+						"hit": 1,
+						"totalDamage": 0,
+						"move": "[Move:roost]"
+					},
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": true,
+					"activeTurns": 2,
+					"activeMoveActions": 1,
+					"previouslySwitchedIn": 1,
+					"truantTurn": false,
+					"isStarted": true,
+					"duringMove": false,
+					"weighthg": 505,
+					"speed": 158,
+					"abilityOrder": 1,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 235,
+					"baseMaxhp": 235,
+					"hp": 235,
+					"moveLastTurnResult": false,
+					"lastMoveTargetLoc": -1,
+					"set": {
+						"name": "Skarmory",
+						"species": "Skarmory",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 80,
+						"moves": [
+							"roost",
+							"bravebird",
+							"bodypress",
+							"stealthrock"
+						],
+						"ability": "Sturdy",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:dusknoir]",
+					"species": "[Species:dusknoir]",
+					"speciesState": {
+						"id": "dusknoir"
+					},
+					"gender": "F",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Pain Split",
+							"id": "painsplit",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Substitute",
+							"id": "substitute",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Earthquake",
+							"id": "earthquake",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacent",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Poltergeist",
+							"id": "poltergeist",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 1,
+					"details": "Dusknoir, L86, F",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 221,
+						"def": 281,
+						"spa": 161,
+						"spd": 281,
+						"spe": 127,
+						"hp": 218
+					},
+					"storedStats": {
+						"atk": 221,
+						"def": 281,
+						"spa": 161,
+						"spd": 281,
+						"spe": 127
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "pressure",
+					"ability": "pressure",
+					"abilityState": {
+						"id": "pressure"
+					},
+					"item": "leftovers",
+					"itemState": {
+						"id": "leftovers"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Ghost"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Ghost",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 1066,
+					"speed": 127,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 218,
+					"baseMaxhp": 218,
+					"hp": 218,
+					"set": {
+						"name": "Dusknoir",
+						"species": "Dusknoir",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 86,
+						"moves": [
+							"painsplit",
+							"substitute",
+							"earthquake",
+							"poltergeist"
+						],
+						"ability": "Pressure",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Leftovers"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:delibird]",
+					"species": "[Species:delibird]",
+					"speciesState": {
+						"id": "delibird"
+					},
+					"gender": "M",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Spikes",
+							"id": "spikes",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "foeSide",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Freeze-Dry",
+							"id": "freezedry",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Rapid Spin",
+							"id": "rapidspin",
+							"pp": 64,
+							"maxpp": 64,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Memento",
+							"id": "memento",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 2,
+					"details": "Delibird, M",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 167,
+						"def": 147,
+						"spa": 187,
+						"spd": 147,
+						"spe": 207,
+						"hp": 252
+					},
+					"storedStats": {
+						"atk": 167,
+						"def": 147,
+						"spa": 187,
+						"spd": 147,
+						"spe": 207
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "vitalspirit",
+					"ability": "vitalspirit",
+					"abilityState": {
+						"id": "vitalspirit"
+					},
+					"item": "heavydutyboots",
+					"itemState": {
+						"id": "heavydutyboots"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Ice",
+						"Flying"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Ice/Flying",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 160,
+					"speed": 207,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 252,
+					"baseMaxhp": 252,
+					"hp": 252,
+					"set": {
+						"name": "Delibird",
+						"species": "Delibird",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 100,
+						"moves": [
+							"spikes",
+							"freezedry",
+							"rapidspin",
+							"memento"
+						],
+						"ability": "Vital Spirit",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Heavy-Duty Boots"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:dhelmise]",
+					"species": "[Species:dhelmise]",
+					"speciesState": {
+						"id": "dhelmise"
+					},
+					"gender": "",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Anchor Shot",
+							"id": "anchorshot",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Poltergeist",
+							"id": "poltergeist",
+							"pp": 8,
+							"maxpp": 8,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Swords Dance",
+							"id": "swordsdance",
+							"pp": 32,
+							"maxpp": 32,
+							"target": "self",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Power Whip",
+							"id": "powerwhip",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 3,
+					"details": "Dhelmise, L86",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dark",
+					"hpPower": 60,
+					"baseHpType": "Dark",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 275,
+						"def": 221,
+						"spa": 197,
+						"spd": 204,
+						"spe": 118,
+						"hp": 261
+					},
+					"storedStats": {
+						"atk": 275,
+						"def": 221,
+						"spa": 197,
+						"spd": 204,
+						"spe": 118
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "steelworker",
+					"ability": "steelworker",
+					"abilityState": {
+						"id": "steelworker"
+					},
+					"item": "lumberry",
+					"itemState": {
+						"id": "lumberry"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Ghost",
+						"Grass"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Ghost/Grass",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 2100,
+					"speed": 118,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 261,
+					"baseMaxhp": 261,
+					"hp": 261,
+					"set": {
+						"name": "Dhelmise",
+						"species": "Dhelmise",
+						"gender": "N",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 86,
+						"moves": [
+							"anchorshot",
+							"poltergeist",
+							"swordsdance",
+							"powerwhip"
+						],
+						"ability": "Steelworker",
+						"evs": {
+							"hp": 85,
+							"atk": 85,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 31,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Lum Berry"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:heliolisk]",
+					"species": "[Species:heliolisk]",
+					"speciesState": {
+						"id": "heliolisk"
+					},
+					"gender": "F",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Surf",
+							"id": "surf",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "allAdjacent",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Thunderbolt",
+							"id": "thunderbolt",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Hyper Voice",
+							"id": "hypervoice",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "allAdjacentFoes",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Glare",
+							"id": "glare",
+							"pp": 48,
+							"maxpp": 48,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 4,
+					"details": "Heliolisk, L82, F",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 95,
+						"def": 132,
+						"spa": 226,
+						"spd": 201,
+						"spe": 226,
+						"hp": 236
+					},
+					"storedStats": {
+						"atk": 95,
+						"def": 132,
+						"spa": 226,
+						"spd": 201,
+						"spe": 226
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "dryskin",
+					"ability": "dryskin",
+					"abilityState": {
+						"id": "dryskin"
+					},
+					"item": "lifeorb",
+					"itemState": {
+						"id": "lifeorb"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Electric",
+						"Normal"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Electric/Normal",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 210,
+					"speed": 226,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 236,
+					"baseMaxhp": 236,
+					"hp": 236,
+					"set": {
+						"name": "Heliolisk",
+						"species": "Heliolisk",
+						"gender": "",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 82,
+						"moves": [
+							"surf",
+							"thunderbolt",
+							"hypervoice",
+							"glare"
+						],
+						"ability": "Dry Skin",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Life Orb"
+					},
+					"percenthp": 1
+				},
+				{
+					"m": {},
+					"baseSpecies": "[Species:porygonz]",
+					"species": "[Species:porygonz]",
+					"speciesState": {
+						"id": "porygonz"
+					},
+					"gender": "",
+					"gigantamax": false,
+					"moveSlots": [
+						{
+							"move": "Thunderbolt",
+							"id": "thunderbolt",
+							"pp": 24,
+							"maxpp": 24,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Ice Beam",
+							"id": "icebeam",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Trick",
+							"id": "trick",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						},
+						{
+							"move": "Tri Attack",
+							"id": "triattack",
+							"pp": 16,
+							"maxpp": 16,
+							"target": "normal",
+							"disabled": false,
+							"disabledSource": "",
+							"used": false
+						}
+					],
+					"position": 5,
+					"details": "Porygon-Z, L80",
+					"status": "",
+					"statusState": {},
+					"volatiles": {},
+					"showCure": false,
+					"hpType": "Dragon",
+					"hpPower": 60,
+					"baseHpType": "Dragon",
+					"baseHpPower": 60,
+					"baseStoredStats": {
+						"atk": 133,
+						"def": 158,
+						"spa": 262,
+						"spd": 166,
+						"spe": 190,
+						"hp": 267
+					},
+					"storedStats": {
+						"atk": 133,
+						"def": 158,
+						"spa": 262,
+						"spd": 166,
+						"spe": 190
+					},
+					"boosts": {
+						"atk": 0,
+						"def": 0,
+						"spa": 0,
+						"spd": 0,
+						"spe": 0,
+						"accuracy": 0,
+						"evasion": 0
+					},
+					"baseAbility": "adaptability",
+					"ability": "adaptability",
+					"abilityState": {
+						"id": "adaptability"
+					},
+					"item": "choicescarf",
+					"itemState": {
+						"id": "choicescarf"
+					},
+					"lastItem": "",
+					"usedItemThisTurn": false,
+					"ateBerry": false,
+					"trapped": false,
+					"maybeTrapped": false,
+					"maybeDisabled": false,
+					"illusion": null,
+					"transformed": false,
+					"fainted": false,
+					"faintQueued": false,
+					"subFainted": null,
+					"types": [
+						"Normal"
+					],
+					"addedType": "",
+					"knownType": true,
+					"apparentType": "Normal",
+					"switchFlag": false,
+					"forceSwitchFlag": false,
+					"skipBeforeSwitchOutEventFlag": false,
+					"draggedIn": null,
+					"newlySwitched": true,
+					"beingCalledBack": false,
+					"lastMove": null,
+					"lastMoveUsed": null,
+					"moveThisTurn": "",
+					"statsRaisedThisTurn": false,
+					"statsLoweredThisTurn": false,
+					"hurtThisTurn": null,
+					"lastDamage": 0,
+					"attackedBy": [],
+					"isActive": false,
+					"activeTurns": 0,
+					"activeMoveActions": 0,
+					"previouslySwitchedIn": 0,
+					"truantTurn": false,
+					"isStarted": false,
+					"duringMove": false,
+					"weighthg": 340,
+					"speed": 190,
+					"abilityOrder": 0,
+					"canMegaEvo": null,
+					"canUltraBurst": null,
+					"canGigantamax": null,
+					"maxhp": 267,
+					"baseMaxhp": 267,
+					"hp": 267,
+					"set": {
+						"name": "Porygon-Z",
+						"species": "Porygon-Z",
+						"gender": "N",
+						"shiny": false,
+						"gigantamax": false,
+						"level": 80,
+						"moves": [
+							"thunderbolt",
+							"icebeam",
+							"trick",
+							"triattack"
+						],
+						"ability": "Adaptability",
+						"evs": {
+							"hp": 85,
+							"atk": 0,
+							"def": 85,
+							"spa": 85,
+							"spd": 85,
+							"spe": 85
+						},
+						"ivs": {
+							"hp": 31,
+							"atk": 0,
+							"def": 31,
+							"spa": 31,
+							"spd": 31,
+							"spe": 31
+						},
+						"item": "Choice Scarf"
+					},
+					"percenthp": 1
+				}
+			],
+			"team": "123456",
+			"choice": {
+				"cantUndo": false,
+				"error": "",
+				"actions": [],
+				"forcedSwitchesLeft": 0,
+				"forcedPassesLeft": 0,
+				"zMove": false,
+				"mega": false,
+				"ultra": false,
+				"dynamax": false,
+				"switchIns": []
+			},
+			"volatiles": [],
+			"opponent": {
+				"volatiles": [],
+				"sideConditions": {},
+				"dynamaxUsed": false,
+				"pokemon": {
+					"nidoqueen": {
+						"name": "nidoqueen",
+						"types": [
+							"Poison",
+							"Ground"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 90,
+							"attack": 92,
+							"defense": 87,
+							"special-attack": 75,
+							"special-defense": 85,
+							"speed": 76
+						},
+						"abilities": [
+							"sheerforce"
+						],
+						"moves": [
+							"earthpower",
+							"icebeam",
+							"sludgewave",
+							"stealthrock",
+							"toxicspikes"
+						],
+						"items": [
+							"Life Orb"
+						]
+					},
+					"reuniclus": {
+						"name": "reuniclus",
+						"types": [
+							"Psychic"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 110,
+							"attack": 65,
+							"defense": 75,
+							"special-attack": 125,
+							"special-defense": 85,
+							"speed": 30
+						},
+						"abilities": [
+							"magicguard"
+						],
+						"moves": [
+							"calmmind",
+							"focusblast",
+							"psychic",
+							"recover",
+							"shadowball",
+							"trickroom"
+						],
+						"items": [
+							"Life Orb"
+						]
+					},
+					"cursola": {
+						"name": "cursola",
+						"types": [
+							"Ghost"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 60,
+							"attack": 95,
+							"defense": 50,
+							"special-attack": 145,
+							"special-defense": 130,
+							"speed": 30
+						},
+						"abilities": [
+							"perishbody",
+							"weakarmor"
+						],
+						"moves": [
+							"earthpower",
+							"hydropump",
+							"icebeam",
+							"shadowball",
+							"stealthrock",
+							"strengthsap"
+						],
+						"items": [
+							"Choice Specs",
+							"Focus Sash",
+							"Leftovers"
+						]
+					},
+					"mrmime": {
+						"name": "mrmime",
+						"types": [
+							"Psychic",
+							"Fairy"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 40,
+							"attack": 45,
+							"defense": 65,
+							"special-attack": 100,
+							"special-defense": 120,
+							"speed": 90
+						},
+						"abilities": [
+							"filter"
+						],
+						"moves": [
+							"dazzlinggleam",
+							"focusblast",
+							"healingwish",
+							"nastyplot",
+							"psychic"
+						],
+						"items": [
+							"Choice Scarf",
+							"Life Orb"
+						]
+					},
+					"diancie": {
+						"name": "diancie",
+						"types": [
+							"Rock",
+							"Fairy"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 50,
+							"attack": 100,
+							"defense": 150,
+							"special-attack": 100,
+							"special-defense": 150,
+							"speed": 50
+						},
+						"abilities": [
+							"clearbody"
+						],
+						"moves": [
+							"bodypress",
+							"diamondstorm",
+							"earthpower",
+							"moonblast",
+							"stealthrock",
+							"toxic"
+						],
+						"items": [
+							"Assault Vest",
+							"Leftovers"
+						]
+					},
+					"durant": {
+						"name": "durant",
+						"types": [
+							"Bug",
+							"Steel"
+						],
+						"percenthp": 1,
+						"baseStats": {
+							"hp": 58,
+							"attack": 109,
+							"defense": 112,
+							"special-attack": 48,
+							"special-defense": 48,
+							"speed": 109
+						},
+						"abilities": [
+							"hustle"
+						],
+						"moves": [
+							"firstimpression",
+							"honeclaws",
+							"ironhead",
+							"rockslide",
+							"superpower"
+						],
+						"items": [
+							"Choice Band",
+							"Life Orb"
+						]
+					}
+				}
+			}
+		}
+	],
+	"prng": [
+		17677,
+		50597,
+		13448,
+		40704
+	],
+	"hints": [],
+	"log": [
+		"|t:|1641151463",
+		"|gametype|singles",
+		"|player|p1|Cock||",
+		"|player|p2|Balls||",
+		"|teamsize|p1|6",
+		"|teamsize|p2|6",
+		"|gen|8",
+		"|tier|[Gen 8] Random Battle",
+		"|rule|Species Clause: Limit one of each Pokémon",
+		"|rule|HP Percentage Mod: HP is shown in percentages",
+		"|rule|Sleep Clause Mod: Limit one foe put to sleep",
+		"|",
+		"|t:|1641151463",
+		"|start",
+		"|split|p1",
+		"|switch|p1a: Nidoqueen|Nidoqueen, L84, F|288/288",
+		"|switch|p1a: Nidoqueen|Nidoqueen, L84, F|100/100",
+		"|split|p2",
+		"|switch|p2a: Skarmory|Skarmory, L80, F|235/235",
+		"|switch|p2a: Skarmory|Skarmory, L80, F|100/100",
+		"|turn|1",
+		"|",
+		"|t:|1641151465",
+		"|move|p1a: Nidoqueen|Stealth Rock|p2a: Skarmory",
+		"|-sidestart|p2: Balls|move: Stealth Rock",
+		"|move|p2a: Skarmory|Roost||[still]",
+		"|-fail|p2a: Skarmory|heal",
+		"|",
+		"|upkeep",
+		"|turn|2"
+	],
+	"queue": [],
+	"formatid": "gen8randombattle"
+}
