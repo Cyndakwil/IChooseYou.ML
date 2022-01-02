@@ -186,13 +186,13 @@ class FightNet(nn.Module):
         self.fc1 = nn.Linear(256, 256)
         self.bn_fc1 = nn.BatchNorm1d(256)
 
-        self.fc2 = nn.Linear(256, 128)
-        self.bn_fc2 = nn.BatchNorm1d(128)
+        self.fc2 = nn.Linear(256, 256)
+        self.bn_fc2 = nn.BatchNorm1d(256)
 
-        self.fc3 = nn.Linear(128, 128)
-        self.bn_fc3 = nn.BatchNorm1d(128)
+        self.fc3 = nn.Linear(256, 256)
+        self.bn_fc3 = nn.BatchNorm1d(256)
 
-        self.out_fc = nn.Linear(128, 11)
+        self.out_fc = nn.Linear(256, 11)
 
     def forward(self, x):
         """ Forward pass through network
@@ -221,7 +221,7 @@ class FightNet(nn.Module):
         x = self.lrelu(x)
         x = self.dropout(x)
 
-        x = self.fc2(x)                     # (batch_size, 128)
+        x = x + self.fc2(x) # Skip connection
         x = self.bn_fc2(x)
         x = self.lrelu(x)
         x = self.dropout(x)
@@ -231,7 +231,7 @@ class FightNet(nn.Module):
         x = self.lrelu(x)
         x = self.dropout(x)
 
-        x = self.out_fc(x)                  # (batch_size, 11)
+        x = self.out_fc(x)                      # (batch_size, 11)
         x[:, :9] = self.log_softmax(x[:, :9])   # Softmax on possible actions
         x[:,  9] = self.sigmoid(x[:,  9])       # Sigmoid on dynamax
         x[:, 10] = self.sigmoid(x[:, 10])       # Sigmoid on win percentage
@@ -313,26 +313,21 @@ if __name__ == "__main__":
             types = [randrange(N_TYPE) for _ in range(randint(1, 2))],
             status = randrange(N_STATUS),
             hp = random(),
-            base_stats = [random() for _ in range(5)],
-            boosts = [randint(-6, 6) for _ in range(5)]
+            base_stats = [random() for _ in range(6)],
+            boosts = [randint(-6, 6) for _ in range(7)]
         )
         for _ in range(6)
     ]
     t2 = [
         Pokemon(
-            [randrange(N_MOVE) for _ in range(randint(4, 20))],
-            [randrange(N_ITEM) for _ in range(randint(1, 10))],
-            [randrange(N_ABILITY) for _ in range(randint(1, 10))],
-            types = [randrange(N_TYPE) for _ in range(randint(1, 2))],
-            status = randrange(N_STATUS),
             hp = 6969,
-            base_stats = [random() for _ in range(5)],
-            boosts = [randint(-6, 6) for _ in range(5)]
         )
         for _ in range(6)
     ]
 
-    s = [FightState(t1, t2)]
+    s = [FightState()]
+    s[0].pokemon = t1
+    s[0].opp_pokemon = t2
     s[0].side_attrib.append(30)
 
     test_ie = InputEncoder()

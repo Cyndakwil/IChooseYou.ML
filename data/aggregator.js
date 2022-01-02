@@ -16,6 +16,7 @@ for (let species of Object.values(data)) {
     }
 
     for (item of species.items || []) {
+        item = item.toLowerCase().replace(/\W+/g, "");
         if (!items.includes(item)) items.push(item);
     }
 

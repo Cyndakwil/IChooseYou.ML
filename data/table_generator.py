@@ -9,6 +9,7 @@ import json
 
 # FIELD ATTRIBUTES
 ID2FA = [
+    "unk",
     "raindance",
     "primordialsea",
     "sunnyday",
@@ -35,6 +36,7 @@ FA2ID = {ID2FA[i] : i for i in range(len(ID2FA))}
 
 # SIDE ATTRIBUTES
 ID2SA = [
+    "unk",
     "mist",
     "lightscreen",
     "reflect",
@@ -141,6 +143,7 @@ SA2ID = {ID2SA[i] : i for i in range(len(ID2SA))}
 
 # TYPE
 ID2TYPE = [
+    "unk",
     "bug",
     "dark",
     "dragon",
@@ -211,17 +214,20 @@ if __name__ == "__main__":
     for fa in ID2ABILITY:
         assert ID2ABILITY[ABILITY2ID[fa]] == fa
 
-    write_json(ID2FA, "./tables/id2fa.json")
-    write_json(FA2ID, "./tables/fa2id.json")
-    write_json(ID2SA, "./tables/id2sa.json")
-    write_json(SA2ID, "./tables/sa2id.json")
-    write_json(ID2TYPE, "./tables/id2type.json")
-    write_json(TYPE2ID, "./tables/type2id.json")
-    write_json(ID2STATUS, "./tables/id2status.json")
-    write_json(STATUS2ID, "./tables/status2id.json")
-    write_json(ID2MOVE, "./tables/id2move.json")
-    write_json(MOVE2ID, "./tables/move2id.json")
-    write_json(ID2ITEM, "./tables/id2item.json")
-    write_json(ITEM2ID, "./tables/item2id.json")
-    write_json(ID2ABILITY, "./tables/id2ability.json")
-    write_json(ABILITY2ID, "./tables/ability2id.json")
+    idtables = {
+        "id2fa": ID2FA,
+        "fa2id": FA2ID,
+        "id2sa": ID2SA,
+        "sa2id": SA2ID,
+        "id2type": ID2TYPE,
+        "type2id": TYPE2ID,
+        "id2status": ID2STATUS,
+        "status2id": STATUS2ID,
+        "id2move": ID2MOVE,
+        "move2id": MOVE2ID,
+        "id2item": ID2ITEM,
+        "item2id": ITEM2ID,
+        "id2ability": ID2ABILITY,
+        "ability2id": ABILITY2ID
+    }
+    write_json(idtables, "./idtables.json")
